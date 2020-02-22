@@ -30,3 +30,6 @@ DerivedData/
 
 Pods/
 *.DS_Store
+
+## R.swift
+*.generated.swift
