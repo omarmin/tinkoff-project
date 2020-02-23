@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol MainCoordinatorOutput: class {
+    var finishFlow: CompletionBlock? { get set }
+}

@@ -8,49 +8,68 @@
 
 import Foundation
 
+private enum LaunchInstructor {
+    case authorization, setPIN, enterPIN, main
+        
+    static func setup() -> LaunchInstructor {
+        /// Здесь нужно разруливать что показывать первым делом
+        return .main
+    }
+}
+
 final class AppCoordinator: BaseCoordinator {
-    
+
+    fileprivate let router: Routable
     fileprivate let factory: CoordinatorFactoryProtocol
-    fileprivate let router : Routable
-    
-    fileprivate let gateway = Gateway()
-    
+
+    fileprivate var instructor: LaunchInstructor {
+        return LaunchInstructor.setup()
+    }
+
     init(router: Routable, factory: CoordinatorFactory) {
         self.router  = router
         self.factory = factory
     }
 }
- 
-// MARK:- Coordinatable
+
+// MARK: - Coordinatable
 extension AppCoordinator: Coordinatable {
     func start() {
-        self.gateway.getState { [unowned self] (state) in
-            switch state {
-            case .authorization:
-                self.performAuthorizationFlow()
-            case .main:
-                self.performMainFlow()
-           }
+        switch instructor {
+        case .main:
+            performMainFlow()
+        case .setPIN:
+            performSetPINFlow()
+        case .enterPIN:
+            performEnterPINFlow()
+        case .authorization:
+            performAuthorizationFlow()
         }
     }
 }
- 
-// MARK:- Private methods
-    func performAuthorizationFlow() {
-        let coordinator = factory.makeAuthorizationCoordinator(with: router)
-        coordinator.finishFlow = { [weak self, weak coordinator] in
-            guard
-                let `self` = self,
-                let `coordinator` = coordinator
-            else { return }
+
+// MARK: - Private methods
+private extension AppCoordinator {
+
+    func performMainFlow() {
+        let coordinator = factory.makeMainCoordinator(router: router)
+        coordinator.finishFlow = { [unowned self, unowned coordinator] in
             self.removeDependency(coordinator)
             self.start()
         }
         addDependency(coordinator)
         coordinator.start()
     }
- 
-func performMainFlow() {
-// MARK:- main flow logic
-}
 
+    func performSetPINFlow() {
+        // Start set PIN flow
+    }
+
+    func performEnterPINFlow() {
+        // Start enter PIN flow
+    }
+
+    func performAuthorizationFlow() {
+        // Start authorization flow
+    }
+}
