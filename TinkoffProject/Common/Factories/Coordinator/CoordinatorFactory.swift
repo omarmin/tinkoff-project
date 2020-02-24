@@ -14,7 +14,11 @@ final class CoordinatorFactory {
 
 // MARK: - CoordinatorFactoryProtocol
 extension CoordinatorFactory: CoordinatorFactoryProtocol {
-    func makeMainCoordinator(router: Routable) -> Coordinatable & MainCoordinatorOutput {
-        return MainCoordinator(with: modulesFactory, router: router)
-    }
+  func makeMainCoordinator(router: Routable) -> Coordinatable & MainCoordinatorOutput {
+    return MainCoordinator(with: modulesFactory, router: router)
+  }
+  
+  func makeLoginScreenCoordinator(router: Routable) -> Coordinatable & LoginScreenCoordinatorOutput {
+    return LoginScreenCoordinator(with: modulesFactory, router: router)
+  }
 }

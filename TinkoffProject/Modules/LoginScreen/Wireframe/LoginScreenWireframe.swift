@@ -18,13 +18,6 @@ class LoginScreenWireframe {
   var pinScreenWireframe: PinScreenWireframe!
   var mainScreenWireframe: MainScreenWireframe!
   
-  func showLoginScreenInterfaceForWindow(window: UIWindow) {
-    let loginScreenViewController = loginScreenViewControllerFromStoryboard()
-    loginScreenViewController.eventHandler = loginScreenPresenter
-    loginScreenPresenter.view = loginScreenViewController
-    rootWireframe.showViewController(viewController: loginScreenViewController, in: window)
-  }
-  
   func showPinScreen() {
     pinScreenWireframe.showPinScreenInteface()
   }
@@ -33,11 +26,11 @@ class LoginScreenWireframe {
     mainScreenWireframe.showMainScreenInterface()
   }
   
-  private func loginScreenViewControllerFromStoryboard() -> LoginScreenViewController {
-    return mainStoryboard().instantiateViewController(identifier: loginScreenViewControllerID)
+  func loginScreenViewControllerFromStoryboard() -> LoginScreenViewController {
+    return loginScreenStoryboard().instantiateViewController(identifier: loginScreenViewControllerID)
   }
   
-  private func mainStoryboard() -> UIStoryboard {
+  private func loginScreenStoryboard() -> UIStoryboard {
     return UIStoryboard.init(name: loginScreenStoryboardName, bundle: Bundle.main)
   }
 }

@@ -28,6 +28,9 @@
 		4391AC6724043EBD0093A6B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4391AC6524043EBD0093A6B6 /* SceneDelegate.swift */; };
 		4391AC6824043EBD0093A6B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4391AC6624043EBD0093A6B6 /* AppDelegate.swift */; };
 		4391AC6A24043EE00093A6B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4391AC6924043EE00093A6B6 /* ViewController.swift */; };
+		824C766A24044C2C0013754A /* LoginScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824C766924044C2C0013754A /* LoginScreenCoordinator.swift */; };
+		824C766C24044CA20013754A /* LoginScreenFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824C766B24044CA20013754A /* LoginScreenFactoryProtocol.swift */; };
+		824C766E24044E350013754A /* LoginScreenCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824C766D24044E350013754A /* LoginScreenCoordinatorOutput.swift */; };
 		824FD6592401C3AC001BDCD8 /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824FD6432401C3AC001BDCD8 /* RootWireframe.swift */; };
 		824FD65A2401C3AC001BDCD8 /* MainScreenWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824FD6442401C3AC001BDCD8 /* MainScreenWireframe.swift */; };
 		824FD65B2401C3AC001BDCD8 /* LoginScreenModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824FD6462401C3AC001BDCD8 /* LoginScreenModuleInterface.swift */; };
@@ -70,6 +73,9 @@
 		4F298E425615476290203A1E /* Pods-TinkoffProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinkoffProject.debug.xcconfig"; path = "Target Support Files/Pods-TinkoffProject/Pods-TinkoffProject.debug.xcconfig"; sourceTree = "<group>"; };
 		5134517CCD3B494870E96E24 /* Pods-TinkoffProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinkoffProject.release.xcconfig"; path = "Target Support Files/Pods-TinkoffProject/Pods-TinkoffProject.release.xcconfig"; sourceTree = "<group>"; };
 		62D9A3AA71B28219B8E20BA4 /* Pods_TinkoffProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinkoffProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		824C766924044C2C0013754A /* LoginScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenCoordinator.swift; sourceTree = "<group>"; };
+		824C766B24044CA20013754A /* LoginScreenFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenFactoryProtocol.swift; sourceTree = "<group>"; };
+		824C766D24044E350013754A /* LoginScreenCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenCoordinatorOutput.swift; sourceTree = "<group>"; };
 		824FD6432401C3AC001BDCD8 /* RootWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootWireframe.swift; path = LoginScreen/RootWireframe.swift; sourceTree = "<group>"; };
 		824FD6442401C3AC001BDCD8 /* MainScreenWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainScreenWireframe.swift; path = LoginScreen/MainScreenWireframe.swift; sourceTree = "<group>"; };
 		824FD6462401C3AC001BDCD8 /* LoginScreenModuleInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenModuleInterface.swift; sourceTree = "<group>"; };
@@ -233,6 +239,16 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		824C766824044BDF0013754A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				824C766924044C2C0013754A /* LoginScreenCoordinator.swift */,
+				824C766B24044CA20013754A /* LoginScreenFactoryProtocol.swift */,
+				824C766D24044E350013754A /* LoginScreenCoordinatorOutput.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		824FD6412401C3AC001BDCD8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +265,7 @@
 		824FD6422401C3AC001BDCD8 /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
+				824C766824044BDF0013754A /* Coordinator */,
 				824FD6452401C3AC001BDCD8 /* Module Interface */,
 				824FD6472401C3AC001BDCD8 /* Presenter */,
 				824FD6492401C3AC001BDCD8 /* Wireframe */,
@@ -524,8 +541,11 @@
 				824FD6612401C3AC001BDCD8 /* LoginScreenInteractor.swift in Sources */,
 				824FD65D2401C3AC001BDCD8 /* LoginScreenWireframe.swift in Sources */,
 				824FD65B2401C3AC001BDCD8 /* LoginScreenModuleInterface.swift in Sources */,
+				824C766A24044C2C0013754A /* LoginScreenCoordinator.swift in Sources */,
 				824FD65C2401C3AC001BDCD8 /* LoginScreenPresenter.swift in Sources */,
 				824FD6642401C3AC001BDCD8 /* CornerRadiusButton.swift in Sources */,
+				824C766E24044E350013754A /* LoginScreenCoordinatorOutput.swift in Sources */,
+				824C766C24044CA20013754A /* LoginScreenFactoryProtocol.swift in Sources */,
 				824FD6622401C3AC001BDCD8 /* LoginScreenViewController.swift in Sources */,
 				07753AD824002C8200A513FA /* R.generated.swift in Sources */,
 				43090931240290BA0030875D /* Routable.swift in Sources */,

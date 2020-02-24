@@ -13,7 +13,7 @@ private enum LaunchInstructor {
         
     static func setup() -> LaunchInstructor {
         /// Здесь нужно разруливать что показывать первым делом
-        return .main
+        return .authorization
     }
 }
 
@@ -50,26 +50,32 @@ extension AppCoordinator: Coordinatable {
 
 // MARK: - Private methods
 private extension AppCoordinator {
-
-    func performMainFlow() {
-        let coordinator = factory.makeMainCoordinator(router: router)
-        coordinator.finishFlow = { [unowned self, unowned coordinator] in
-            self.removeDependency(coordinator)
-            self.start()
-        }
-        addDependency(coordinator)
-        coordinator.start()
+  
+  func performMainFlow() {
+    let coordinator = factory.makeMainCoordinator(router: router)
+    coordinator.finishFlow = { [unowned self, unowned coordinator] in
+      self.removeDependency(coordinator)
+      self.start()
     }
-
-    func performSetPINFlow() {
-        // Start set PIN flow
+    addDependency(coordinator)
+    coordinator.start()
+  }
+  
+  func performSetPINFlow() {
+    // Start set PIN flow
+  }
+  
+  func performEnterPINFlow() {
+    // Start enter PIN flow
+  }
+  
+  func performAuthorizationFlow() {
+    let coordinator = factory.makeLoginScreenCoordinator(router: router)
+    coordinator.finishFlow = { [unowned self, unowned coordinator] in
+      self.removeDependency(coordinator)
+      self.start()
     }
-
-    func performEnterPINFlow() {
-        // Start enter PIN flow
-    }
-
-    func performAuthorizationFlow() {
-        // Start authorization flow
-    }
+    addDependency(coordinator)
+    coordinator.start()
+  }
 }

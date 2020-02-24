@@ -12,5 +12,5 @@ protocol CoordinatorFactoryProtocol {
     func makeMainCoordinator(router: Routable) -> Coordinatable & MainCoordinatorOutput
 //    func makeSetPINCoordinator(router: Routable) -> Coordinatable & SetPINCoordinatorOutput
 //    func makeEnterPINCoordinator(router: Routable) -> Coordinatable & EnterPINCoordinatorOutput
-//    func makeAuthorizationCoordinator(router: Routable) -> Coordinatable & AuthorizationCoordinatorOutput
+    func makeLoginScreenCoordinator(router: Routable) -> Coordinatable & LoginScreenCoordinatorOutput
 }
