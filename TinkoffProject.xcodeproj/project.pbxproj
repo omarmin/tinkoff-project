@@ -9,24 +9,50 @@
 /* Begin PBXBuildFile section */
 		0442D3FCBE3584F2984CBABB /* Pods_TinkoffProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D9A3AA71B28219B8E20BA4 /* Pods_TinkoffProject.framework */; };
 		07753AC1240026EE00A513FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07753AC0240026EE00A513FA /* AppDelegate.swift */; };
-		07753AC3240026EE00A513FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07753AC2240026EE00A513FA /* SceneDelegate.swift */; };
 		07753AC5240026EE00A513FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07753AC4240026EE00A513FA /* ViewController.swift */; };
 		07753AC8240026EE00A513FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07753AC6240026EE00A513FA /* Main.storyboard */; };
 		07753ACA240026F000A513FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07753AC9240026F000A513FA /* Assets.xcassets */; };
 		07753ACD240026F000A513FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07753ACB240026F000A513FA /* LaunchScreen.storyboard */; };
 		07753AD824002C8200A513FA /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07753AD724002C8200A513FA /* R.generated.swift */; };
+		4309080624028BBA0030875D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4309080524028BBA0030875D /* AppCoordinator.swift */; };
+		43090920240290BA0030875D /* CoordinatorFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430908D9240290BA0030875D /* CoordinatorFactoryProtocol.swift */; };
+		43090921240290BA0030875D /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430908DA240290BA0030875D /* CoordinatorFactory.swift */; };
+		43090922240290BA0030875D /* ModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430908DC240290BA0030875D /* ModulesFactory.swift */; };
+		43090924240290BA0030875D /* MainFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430908E0240290BA0030875D /* MainFactoryProtocol.swift */; };
+		43090931240290BA0030875D /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430908F0240290BA0030875D /* Routable.swift */; };
+		43090932240290BA0030875D /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430908F1240290BA0030875D /* Presentable.swift */; };
+		43090933240290BA0030875D /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430908F2240290BA0030875D /* Coordinatable.swift */; };
+		43090939240290BA0030875D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430908F9240290BA0030875D /* Router.swift */; };
+		4309093A240290BA0030875D /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430908FB240290BA0030875D /* BaseCoordinator.swift */; };
+		430909402402A06B0030875D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4309093F2402A06B0030875D /* MainCoordinator.swift */; };
+		430909422402A0940030875D /* MainCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430909412402A0940030875D /* MainCoordinatorOutput.swift */; };
+		430909462402B8910030875D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430909452402B8910030875D /* SceneDelegate.swift */; };
+		430909482402C0A40030875D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430909472402C0A40030875D /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07753ABD240026EE00A513FA /* TinkoffProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07753AC0240026EE00A513FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		07753AC2240026EE00A513FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		07753AC4240026EE00A513FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		07753AC7240026EE00A513FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07753AC9240026F000A513FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07753ACC240026F000A513FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07753ACE240026F000A513FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07753AD724002C8200A513FA /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		4309080524028BBA0030875D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		430908D9240290BA0030875D /* CoordinatorFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorFactoryProtocol.swift; sourceTree = "<group>"; };
+		430908DA240290BA0030875D /* CoordinatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		430908DC240290BA0030875D /* ModulesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModulesFactory.swift; sourceTree = "<group>"; };
+		430908E0240290BA0030875D /* MainFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFactoryProtocol.swift; sourceTree = "<group>"; };
+		430908F0240290BA0030875D /* Routable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		430908F1240290BA0030875D /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		430908F2240290BA0030875D /* Coordinatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
+		430908F9240290BA0030875D /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		430908FB240290BA0030875D /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		4309093F2402A06B0030875D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		430909412402A0940030875D /* MainCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorOutput.swift; sourceTree = "<group>"; };
+		430909452402B8910030875D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		430909472402C0A40030875D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4F298E425615476290203A1E /* Pods-TinkoffProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinkoffProject.debug.xcconfig"; path = "Target Support Files/Pods-TinkoffProject/Pods-TinkoffProject.debug.xcconfig"; sourceTree = "<group>"; };
 		5134517CCD3B494870E96E24 /* Pods-TinkoffProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinkoffProject.release.xcconfig"; path = "Target Support Files/Pods-TinkoffProject/Pods-TinkoffProject.release.xcconfig"; sourceTree = "<group>"; };
 		62D9A3AA71B28219B8E20BA4 /* Pods_TinkoffProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinkoffProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,10 +91,11 @@
 		07753ABF240026EE00A513FA /* TinkoffProject */ = {
 			isa = PBXGroup;
 			children = (
-				07753AC0240026EE00A513FA /* AppDelegate.swift */,
-				07753AC2240026EE00A513FA /* SceneDelegate.swift */,
-				07753AC4240026EE00A513FA /* ViewController.swift */,
+				4309093B2402A02D0030875D /* Modules */,
+				430908C9240290BA0030875D /* Common */,
+				4309080724028D1F0030875D /* AppDelegate */,
 				07753AC6240026EE00A513FA /* Main.storyboard */,
+				430909452402B8910030875D /* SceneDelegate.swift */,
 				07753ACB240026F000A513FA /* LaunchScreen.storyboard */,
 				07753AD624002C6E00A513FA /* Resources */,
 			);
@@ -83,6 +110,106 @@
 				07753ACE240026F000A513FA /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4309080724028D1F0030875D /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				07753AC0240026EE00A513FA /* AppDelegate.swift */,
+				4309080524028BBA0030875D /* AppCoordinator.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		430908C9240290BA0030875D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				430908D7240290BA0030875D /* Factories */,
+				430908EF240290BA0030875D /* Protocols */,
+				430908F4240290BA0030875D /* Helpers */,
+				430908FA240290BA0030875D /* Base */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		430908D7240290BA0030875D /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				430908D8240290BA0030875D /* Coordinator */,
+				430908DB240290BA0030875D /* Modules */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		430908D8240290BA0030875D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				430908D9240290BA0030875D /* CoordinatorFactoryProtocol.swift */,
+				430908DA240290BA0030875D /* CoordinatorFactory.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		430908DB240290BA0030875D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				430908DC240290BA0030875D /* ModulesFactory.swift */,
+				430908DF240290BA0030875D /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		430908DF240290BA0030875D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				430908E0240290BA0030875D /* MainFactoryProtocol.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		430908EF240290BA0030875D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				430908F0240290BA0030875D /* Routable.swift */,
+				430908F1240290BA0030875D /* Presentable.swift */,
+				430908F2240290BA0030875D /* Coordinatable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		430908F4240290BA0030875D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				430909472402C0A40030875D /* Constants.swift */,
+				430908F9240290BA0030875D /* Router.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		430908FA240290BA0030875D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				430908FB240290BA0030875D /* BaseCoordinator.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		4309093B2402A02D0030875D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4309093E2402A04D0030875D /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		4309093E2402A04D0030875D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				07753AC4240026EE00A513FA /* ViewController.swift */,
+				4309093F2402A06B0030875D /* MainCoordinator.swift */,
+				430909412402A0940030875D /* MainCoordinatorOutput.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		88E6FE45BB5E8D6E083D6F9F /* Pods */ = {
@@ -257,10 +384,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43090933240290BA0030875D /* Coordinatable.swift in Sources */,
+				430909482402C0A40030875D /* Constants.swift in Sources */,
+				43090922240290BA0030875D /* ModulesFactory.swift in Sources */,
+				430909462402B8910030875D /* SceneDelegate.swift in Sources */,
+				4309093A240290BA0030875D /* BaseCoordinator.swift in Sources */,
+				43090939240290BA0030875D /* Router.swift in Sources */,
+				430909422402A0940030875D /* MainCoordinatorOutput.swift in Sources */,
+				430909402402A06B0030875D /* MainCoordinator.swift in Sources */,
 				07753AC5240026EE00A513FA /* ViewController.swift in Sources */,
+				43090920240290BA0030875D /* CoordinatorFactoryProtocol.swift in Sources */,
 				07753AC1240026EE00A513FA /* AppDelegate.swift in Sources */,
-				07753AC3240026EE00A513FA /* SceneDelegate.swift in Sources */,
+				4309080624028BBA0030875D /* AppCoordinator.swift in Sources */,
+				43090921240290BA0030875D /* CoordinatorFactory.swift in Sources */,
+				43090924240290BA0030875D /* MainFactoryProtocol.swift in Sources */,
+				43090932240290BA0030875D /* Presentable.swift in Sources */,
 				07753AD824002C8200A513FA /* R.generated.swift in Sources */,
+				43090931240290BA0030875D /* Routable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
