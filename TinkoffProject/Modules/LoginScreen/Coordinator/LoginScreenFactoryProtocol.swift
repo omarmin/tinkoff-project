@@ -9,5 +9,5 @@
 import Foundation
 
 protocol LoginScreenFactoryProtocol {
-    func makeLoginView() -> LoginScreenViewController
+  func makeLoginViewWithCoordinator(coordinator: LoginScreenCoordinator) -> LoginScreenViewController
 }

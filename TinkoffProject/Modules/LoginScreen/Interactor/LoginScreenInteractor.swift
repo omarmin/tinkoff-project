@@ -14,12 +14,12 @@ class LoginScreenInteractor: LoginScreenInteractorInput {
   private var userInfo: [String: Any]?
   var output: LoginScreenInteractorOutput!
   
-  func checkUserWithCredentials(login: String, pass: String, pinSelected: Bool) {
-    
-    //simulating network request
-    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-      self.credentialsChecked()
-    }
+    func checkUserWithCredentials(login: String, pass: String) {
+      //simulating network request
+      DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        self.userInfo = ["userID": "test001"]
+        self.credentialsChecked()
+      }
   }
   
   private func credentialsChecked() {

@@ -56,9 +56,11 @@ class LoginScreenViewController: UIViewController, LoginScreenViewInterface {
   
   func showLoadingIndicator() {
     progressIndicator.isHidden = false
+    progressIndicator.startAnimating()
   }
   
   func hideLoadingIndicator() {
+    progressIndicator.stopAnimating()
     progressIndicator.isHidden = true
   }
   
@@ -180,6 +182,3 @@ class LoginScreenViewController: UIViewController, LoginScreenViewInterface {
   }
 }
 
-extension LoginScreenViewController: UITextFieldDelegate {
-  
-}

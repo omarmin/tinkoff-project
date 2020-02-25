@@ -8,22 +8,19 @@
 
 import UIKit
 
-class LoginScreenWireframe {
-  
+class LoginScreenWireframe: LoginScreenWireframeInput {
   private let loginScreenStoryboardName = "LoginScreen"
   private let loginScreenViewControllerID = "loginScreenViewController"
   
-  var rootWireframe: RootWireframe!
+  var coordinator: LoginScreenCoordinator!
   var loginScreenPresenter: LoginScreenPresenter!
-  var pinScreenWireframe: PinScreenWireframe!
-  var mainScreenWireframe: MainScreenWireframe!
   
   func showPinScreen() {
-    pinScreenWireframe.showPinScreenInteface()
+    coordinator.showPinCodeScreen()
   }
   
   func showMainScreen() {
-    mainScreenWireframe.showMainScreenInterface()
+    coordinator.showMainScreen()
   }
   
   func loginScreenViewControllerFromStoryboard() -> LoginScreenViewController {

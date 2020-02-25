@@ -15,10 +15,10 @@ class LoginScreenPresenter: LoginScreenModuleInterface {
 
   weak var view: LoginScreenViewInterface!
   var interactor: LoginScreenInteractorInput!
-  var wireframe: LoginScreenWireframe!
+  var wireframe: LoginScreenWireframeInput!
         
   func checkUserWithCredentials(login: String, pass: String) {
-    interactor.checkUserWithCredentials(login: login, pass: pass, pinSelected: pinSelected)
+    interactor.checkUserWithCredentials(login: login, pass: pass)
   }
   
   func userChangedPinToggle(state: Bool) {
@@ -28,9 +28,7 @@ class LoginScreenPresenter: LoginScreenModuleInterface {
 
 extension LoginScreenPresenter: LoginScreenInteractorOutput {
   func userSuccessfullyAuthenticated(userInfo: [String: Any]) {
-    if let isPinSelected = userInfo["isPinSelected"] as? Bool {
-      isPinSelected ? wireframe.showPinScreen() : wireframe.showMainScreen()
-    }
+    pinSelected ? wireframe.showPinScreen() : wireframe.showMainScreen()
   }
   
   func userAuthenticationError(error: Error) {

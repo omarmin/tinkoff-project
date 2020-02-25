@@ -9,7 +9,7 @@
 import Foundation
 
 protocol LoginScreenInteractorInput {
-  func checkUserWithCredentials(login: String, pass: String, pinSelected: Bool)
+  func checkUserWithCredentials(login: String, pass: String)
 }
 
 protocol LoginScreenInteractorOutput {

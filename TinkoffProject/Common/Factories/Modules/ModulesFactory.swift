@@ -19,12 +19,17 @@ extension ModulesFactory: MainFactoryProtocol {
 }
 
 extension ModulesFactory: LoginScreenFactoryProtocol {
-  func makeLoginView() -> LoginScreenViewController {
+  func makeLoginViewWithCoordinator(coordinator: LoginScreenCoordinator) -> LoginScreenViewController {
     let loginSceenWireframe = LoginScreenWireframe()
     let loginScreenPresenter = LoginScreenPresenter()
+    let loginScreenInteractor = LoginScreenInteractor()
     let loginScreenViewController = loginSceenWireframe.loginScreenViewControllerFromStoryboard()
     loginScreenViewController.eventHandler = loginScreenPresenter
     loginScreenPresenter.view = loginScreenViewController
+    loginScreenPresenter.interactor = loginScreenInteractor
+    loginScreenPresenter.wireframe = loginSceenWireframe
+    loginSceenWireframe.coordinator = coordinator
+    loginScreenInteractor.output = loginScreenPresenter
     
     return loginScreenViewController
   }
