@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginScreenViewController: UIViewController, LoginScreenViewInterface {
+class LoginScreenViewController: UIViewController {
   
   @IBOutlet weak var loginTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
@@ -31,6 +31,7 @@ class LoginScreenViewController: UIViewController, LoginScreenViewInterface {
   
   var eventHandler: LoginScreenModuleInterface!
   
+  // MARK: -Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
     resetContent()
@@ -43,33 +44,7 @@ class LoginScreenViewController: UIViewController, LoginScreenViewInterface {
     nextButton.layoutSubviews()
   }
   
-  override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-    return UIInterfaceOrientationMask.portrait
-  }
-  
-  func resetContent() {
-    hideErrorMessage()
-    hideLoadingIndicator()
-    pinSwitch.setOn(false, animated: false)
-    
-  }
-  
-  func showLoadingIndicator() {
-    progressIndicator.isHidden = false
-    progressIndicator.startAnimating()
-  }
-  
-  func hideLoadingIndicator() {
-    progressIndicator.stopAnimating()
-    progressIndicator.isHidden = true
-  }
-  
-  func setNextButtonEnabled(state: Bool) {
-    let alpha: CGFloat = state ? 1 : 0.65
-    nextButton.isEnabled = state
-    nextButton.alpha = alpha
-  }
-  
+  // MARK: -Private methods
   private func setupPlaceholders() {
     let placeholders: [UILabel] = [loginPlaceholder, passwordPlaceholder]
     
@@ -107,11 +82,6 @@ class LoginScreenViewController: UIViewController, LoginScreenViewInterface {
     return field.text == "" || field.text?.count == 0 || field.text == nil
   }
   
-  func showErrorMessage(text: String) {
-    errorMessageLabel.text = text
-    errorMessageLabel.isHidden = false
-  }
-  
   private func hideErrorMessage() {
     errorMessageLabel.isHidden = true
   }
@@ -146,6 +116,7 @@ class LoginScreenViewController: UIViewController, LoginScreenViewInterface {
     scrollView?.endEditing(true)
   }
   
+  // MARK: -IBActions
   @IBAction func loginFieldDidChange(_ sender: Any) {
     isLoginValid = CommonFunctions.validateLogin(login: loginTextField?.text ?? "")
     setNextButtonEnabled(state: isLoginValid && isPassValid)
@@ -179,6 +150,46 @@ class LoginScreenViewController: UIViewController, LoginScreenViewInterface {
   
   @IBAction func pinSwitchDidChangeValue(_ sender: Any) {
     eventHandler.userChangedPinToggle(state: pinSwitch.isOn)
+  }
+}
+
+// MARK: -LoginScreenViewInterface
+extension LoginScreenViewController: LoginScreenViewInterface {
+   override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+     return UIInterfaceOrientationMask.portrait
+   }
+   
+   func resetContent() {
+     hideErrorMessage()
+     hideLoadingIndicator()
+     pinSwitch.setOn(false, animated: false)
+     
+   }
+   
+   func showLoadingIndicator() {
+     progressIndicator.isHidden = false
+     progressIndicator.startAnimating()
+   }
+   
+   func hideLoadingIndicator() {
+     progressIndicator.stopAnimating()
+     progressIndicator.isHidden = true
+   }
+   
+   func setNextButtonEnabled(state: Bool) {
+     let alpha: CGFloat = state ? 1 : 0.65
+     nextButton.isEnabled = state
+     nextButton.alpha = alpha
+   }
+   
+   func showErrorMessage(text: String) {
+     errorMessageLabel.text = text
+     errorMessageLabel.isHidden = false
+   }
+  
+  func setInputEnabled(status: Bool) {
+    nextButton.isUserInteractionEnabled = status
+    pinSwitch.isUserInteractionEnabled = status
   }
 }
 

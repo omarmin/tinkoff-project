@@ -18,6 +18,7 @@ class LoginScreenPresenter: LoginScreenModuleInterface {
   var wireframe: LoginScreenWireframeInput!
         
   func checkUserWithCredentials(login: String, pass: String) {
+    view.setInputEnabled(status: false)
     interactor.checkUserWithCredentials(login: login, pass: pass)
   }
   
@@ -32,6 +33,7 @@ extension LoginScreenPresenter: LoginScreenInteractorOutput {
   }
   
   func userAuthenticationError(error: Error) {
+    view.setInputEnabled(status: true)
     view.showErrorMessage(text: authErrorMessage)
   }
 }

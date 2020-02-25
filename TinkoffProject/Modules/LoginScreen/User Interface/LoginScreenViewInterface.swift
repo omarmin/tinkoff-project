@@ -14,4 +14,5 @@ protocol LoginScreenViewInterface: class {
   func hideLoadingIndicator()
   func setNextButtonEnabled(state: Bool)
   func showErrorMessage(text: String)
+  func setInputEnabled(status: Bool)
 }
