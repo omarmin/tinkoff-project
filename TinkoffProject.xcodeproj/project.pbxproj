@@ -8,28 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0442D3FCBE3584F2984CBABB /* Pods_TinkoffProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D9A3AA71B28219B8E20BA4 /* Pods_TinkoffProject.framework */; };
-		0716D9D42406A66600419C69 /* PinCodeScreenModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716D9D32406A66600419C69 /* PinCodeScreenModuleOutput.swift */; };
-		0716D9D72406ACFA00419C69 /* LoginScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716D9D62406ACFA00419C69 /* LoginScreenAssembly.swift */; };
-		0716D9D92406ADAB00419C69 /* LoginScreenModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716D9D82406ADAB00419C69 /* LoginScreenModuleOutput.swift */; };
 		07753AC8240026EE00A513FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07753AC6240026EE00A513FA /* Main.storyboard */; };
 		07753ACA240026F000A513FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07753AC9240026F000A513FA /* Assets.xcassets */; };
 		07753ACD240026F000A513FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07753ACB240026F000A513FA /* LaunchScreen.storyboard */; };
 		079773D8240683EF004616C1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07753AD724002C8200A513FA /* R.generated.swift */; };
 		079773D9240683F3004616C1 /* CoordinatorFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430908D9240290BA0030875D /* CoordinatorFactoryProtocol.swift */; };
-		079773DC24068612004616C1 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 079773DB24068612004616C1 /* LoginScreen.storyboard */; };
-		07BD1DDA24050473002B2325 /* PinCodeScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD1DCB24050473002B2325 /* PinCodeScreenAssembly.swift */; };
-		07BD1DDB24050473002B2325 /* PinCodeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD1DCD24050473002B2325 /* PinCodeScreenPresenter.swift */; };
-		07BD1DDC24050473002B2325 /* PinCodeScreenModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD1DCE24050473002B2325 /* PinCodeScreenModuleInput.swift */; };
-		07BD1DDD24050473002B2325 /* PinCodeScreenViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD1DD024050473002B2325 /* PinCodeScreenViewOutput.swift */; };
-		07BD1DDE24050473002B2325 /* PinCodeScreenViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD1DD124050473002B2325 /* PinCodeScreenViewInput.swift */; };
-		07BD1DDF24050473002B2325 /* PinCodeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD1DD224050473002B2325 /* PinCodeScreenViewController.swift */; };
-		07BD1DE024050473002B2325 /* PinCodeScreenInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD1DD424050473002B2325 /* PinCodeScreenInteractorInput.swift */; };
-		07BD1DE124050473002B2325 /* PinCodeScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD1DD524050473002B2325 /* PinCodeScreenInteractor.swift */; };
-		07BD1DE224050473002B2325 /* PinCodeScreenInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD1DD624050473002B2325 /* PinCodeScreenInteractorOutput.swift */; };
-		07BD1DE6240505B4002B2325 /* PinCodeModuleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD1DE5240505B4002B2325 /* PinCodeModuleType.swift */; };
-		07BD1DE82405060C002B2325 /* PinCodeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD1DE72405060C002B2325 /* PinCodeScreen.storyboard */; };
-		07BD1DEA240509B6002B2325 /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD1DE9240509B6002B2325 /* PointsView.swift */; };
-		07BD1E0C240526DA002B2325 /* PinCodeScreenViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD1E0B240526DA002B2325 /* PinCodeScreenViewType.swift */; };
 		4309080624028BBA0030875D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4309080524028BBA0030875D /* AppCoordinator.swift */; };
 		43090921240290BA0030875D /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430908DA240290BA0030875D /* CoordinatorFactory.swift */; };
 		43090922240290BA0030875D /* ModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430908DC240290BA0030875D /* ModulesFactory.swift */; };
@@ -47,41 +30,15 @@
 		824C766A24044C2C0013754A /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824C766924044C2C0013754A /* AuthCoordinator.swift */; };
 		824C766C24044CA20013754A /* AuthFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824C766B24044CA20013754A /* AuthFactory.swift */; };
 		824C766E24044E350013754A /* AuthCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824C766D24044E350013754A /* AuthCoordinatorOutput.swift */; };
-		824FD65B2401C3AC001BDCD8 /* LoginScreenModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824FD6462401C3AC001BDCD8 /* LoginScreenModuleInterface.swift */; };
-		824FD65C2401C3AC001BDCD8 /* LoginScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824FD6482401C3AC001BDCD8 /* LoginScreenPresenter.swift */; };
-		824FD6602401C3AC001BDCD8 /* LoginScreenInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824FD64E2401C3AC001BDCD8 /* LoginScreenInteractorIO.swift */; };
-		824FD6612401C3AC001BDCD8 /* LoginScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824FD64F2401C3AC001BDCD8 /* LoginScreenInteractor.swift */; };
-		824FD6622401C3AC001BDCD8 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824FD6512401C3AC001BDCD8 /* LoginScreenViewController.swift */; };
-		824FD6632401C3AC001BDCD8 /* LoginScreenViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824FD6522401C3AC001BDCD8 /* LoginScreenViewInterface.swift */; };
-		824FD6642401C3AC001BDCD8 /* CornerRadiusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824FD6552401C3AC001BDCD8 /* CornerRadiusButton.swift */; };
-		824FD6652401C3AC001BDCD8 /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824FD6572401C3AC001BDCD8 /* UIColor+HexString.swift */; };
-		824FD6662401C3AC001BDCD8 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824FD6582401C3AC001BDCD8 /* CommonFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0716D9D32406A66600419C69 /* PinCodeScreenModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeScreenModuleOutput.swift; sourceTree = "<group>"; };
-		0716D9D62406ACFA00419C69 /* LoginScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenAssembly.swift; sourceTree = "<group>"; };
-		0716D9D82406ADAB00419C69 /* LoginScreenModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenModuleOutput.swift; sourceTree = "<group>"; };
 		07753ABD240026EE00A513FA /* TinkoffProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07753AC7240026EE00A513FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07753AC9240026F000A513FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07753ACC240026F000A513FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07753ACE240026F000A513FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07753AD724002C8200A513FA /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
-		079773DB24068612004616C1 /* LoginScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
-		07BD1DCB24050473002B2325 /* PinCodeScreenAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeScreenAssembly.swift; sourceTree = "<group>"; };
-		07BD1DCD24050473002B2325 /* PinCodeScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeScreenPresenter.swift; sourceTree = "<group>"; };
-		07BD1DCE24050473002B2325 /* PinCodeScreenModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeScreenModuleInput.swift; sourceTree = "<group>"; };
-		07BD1DD024050473002B2325 /* PinCodeScreenViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeScreenViewOutput.swift; sourceTree = "<group>"; };
-		07BD1DD124050473002B2325 /* PinCodeScreenViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeScreenViewInput.swift; sourceTree = "<group>"; };
-		07BD1DD224050473002B2325 /* PinCodeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeScreenViewController.swift; sourceTree = "<group>"; };
-		07BD1DD424050473002B2325 /* PinCodeScreenInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeScreenInteractorInput.swift; sourceTree = "<group>"; };
-		07BD1DD524050473002B2325 /* PinCodeScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeScreenInteractor.swift; sourceTree = "<group>"; };
-		07BD1DD624050473002B2325 /* PinCodeScreenInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeScreenInteractorOutput.swift; sourceTree = "<group>"; };
-		07BD1DE5240505B4002B2325 /* PinCodeModuleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeModuleType.swift; sourceTree = "<group>"; };
-		07BD1DE72405060C002B2325 /* PinCodeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PinCodeScreen.storyboard; sourceTree = "<group>"; };
-		07BD1DE9240509B6002B2325 /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
-		07BD1E0B240526DA002B2325 /* PinCodeScreenViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeScreenViewType.swift; sourceTree = "<group>"; };
 		4309080524028BBA0030875D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		430908D9240290BA0030875D /* CoordinatorFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorFactoryProtocol.swift; sourceTree = "<group>"; };
 		430908DA240290BA0030875D /* CoordinatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
@@ -103,15 +60,6 @@
 		824C766924044C2C0013754A /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		824C766B24044CA20013754A /* AuthFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFactory.swift; sourceTree = "<group>"; };
 		824C766D24044E350013754A /* AuthCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinatorOutput.swift; sourceTree = "<group>"; };
-		824FD6462401C3AC001BDCD8 /* LoginScreenModuleInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenModuleInterface.swift; sourceTree = "<group>"; };
-		824FD6482401C3AC001BDCD8 /* LoginScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenPresenter.swift; sourceTree = "<group>"; };
-		824FD64E2401C3AC001BDCD8 /* LoginScreenInteractorIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenInteractorIO.swift; sourceTree = "<group>"; };
-		824FD64F2401C3AC001BDCD8 /* LoginScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenInteractor.swift; sourceTree = "<group>"; };
-		824FD6512401C3AC001BDCD8 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
-		824FD6522401C3AC001BDCD8 /* LoginScreenViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewInterface.swift; sourceTree = "<group>"; };
-		824FD6552401C3AC001BDCD8 /* CornerRadiusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadiusButton.swift; sourceTree = "<group>"; };
-		824FD6572401C3AC001BDCD8 /* UIColor+HexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HexString.swift"; sourceTree = "<group>"; };
-		824FD6582401C3AC001BDCD8 /* CommonFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,22 +74,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0716D9D22406A63400419C69 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				07BD1DE5240505B4002B2325 /* PinCodeModuleType.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		0716D9D52406ACC700419C69 /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-				0716D9D62406ACFA00419C69 /* LoginScreenAssembly.swift */,
-			);
-			path = Assembly;
-			sourceTree = "<group>";
-		};
 		07753AB4240026EE00A513FA = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +98,6 @@
 				430908C9240290BA0030875D /* Common */,
 				4309080724028D1F0030875D /* AppDelegate */,
 				824FD6412401C3AC001BDCD8 /* Modules */,
-				824FD6532401C3AC001BDCD8 /* Utils */,
 				07753AC6240026EE00A513FA /* Main.storyboard */,
 				07753ACB240026F000A513FA /* LaunchScreen.storyboard */,
 				07753AD624002C6E00A513FA /* Resources */,
@@ -188,71 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				824C766824044BDF0013754A /* Coordinator */,
-				07BD1DC924050473002B2325 /* PinCodeScreen */,
-				824FD6422401C3AC001BDCD8 /* LoginScreen */,
 			);
 			path = Auth;
-			sourceTree = "<group>";
-		};
-		07BD1DC924050473002B2325 /* PinCodeScreen */ = {
-			isa = PBXGroup;
-			children = (
-				07BD1DE72405060C002B2325 /* PinCodeScreen.storyboard */,
-				07BD1DCA24050473002B2325 /* Assembly */,
-				07BD1DD324050473002B2325 /* Interactor */,
-				07BD1DCC24050473002B2325 /* Presenter */,
-				07BD1DCF24050473002B2325 /* View */,
-			);
-			path = PinCodeScreen;
-			sourceTree = "<group>";
-		};
-		07BD1DCA24050473002B2325 /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-				07BD1DCB24050473002B2325 /* PinCodeScreenAssembly.swift */,
-			);
-			path = Assembly;
-			sourceTree = "<group>";
-		};
-		07BD1DCC24050473002B2325 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				0716D9D22406A63400419C69 /* Models */,
-				07BD1DCE24050473002B2325 /* PinCodeScreenModuleInput.swift */,
-				0716D9D32406A66600419C69 /* PinCodeScreenModuleOutput.swift */,
-				07BD1DCD24050473002B2325 /* PinCodeScreenPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		07BD1DCF24050473002B2325 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				07BD1E0D24053B0B002B2325 /* PointsView */,
-				07BD1E0B240526DA002B2325 /* PinCodeScreenViewType.swift */,
-				07BD1DD124050473002B2325 /* PinCodeScreenViewInput.swift */,
-				07BD1DD024050473002B2325 /* PinCodeScreenViewOutput.swift */,
-				07BD1DD224050473002B2325 /* PinCodeScreenViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		07BD1DD324050473002B2325 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				07BD1DD424050473002B2325 /* PinCodeScreenInteractorInput.swift */,
-				07BD1DD624050473002B2325 /* PinCodeScreenInteractorOutput.swift */,
-				07BD1DD524050473002B2325 /* PinCodeScreenInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		07BD1E0D24053B0B002B2325 /* PointsView */ = {
-			isa = PBXGroup;
-			children = (
-				07BD1DE9240509B6002B2325 /* PointsView.swift */,
-			);
-			path = PointsView;
 			sourceTree = "<group>";
 		};
 		4309080724028D1F0030875D /* AppDelegate */ = {
@@ -366,80 +234,6 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		824FD6422401C3AC001BDCD8 /* LoginScreen */ = {
-			isa = PBXGroup;
-			children = (
-				0716D9D52406ACC700419C69 /* Assembly */,
-				079773DB24068612004616C1 /* LoginScreen.storyboard */,
-				824FD6452401C3AC001BDCD8 /* Module Interface */,
-				824FD6472401C3AC001BDCD8 /* Presenter */,
-				824FD64D2401C3AC001BDCD8 /* Interactor */,
-				824FD6502401C3AC001BDCD8 /* User Interface */,
-			);
-			path = LoginScreen;
-			sourceTree = "<group>";
-		};
-		824FD6452401C3AC001BDCD8 /* Module Interface */ = {
-			isa = PBXGroup;
-			children = (
-				0716D9D82406ADAB00419C69 /* LoginScreenModuleOutput.swift */,
-				824FD6462401C3AC001BDCD8 /* LoginScreenModuleInterface.swift */,
-			);
-			path = "Module Interface";
-			sourceTree = "<group>";
-		};
-		824FD6472401C3AC001BDCD8 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				824FD6482401C3AC001BDCD8 /* LoginScreenPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		824FD64D2401C3AC001BDCD8 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				824FD64E2401C3AC001BDCD8 /* LoginScreenInteractorIO.swift */,
-				824FD64F2401C3AC001BDCD8 /* LoginScreenInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		824FD6502401C3AC001BDCD8 /* User Interface */ = {
-			isa = PBXGroup;
-			children = (
-				824FD6512401C3AC001BDCD8 /* LoginScreenViewController.swift */,
-				824FD6522401C3AC001BDCD8 /* LoginScreenViewInterface.swift */,
-			);
-			path = "User Interface";
-			sourceTree = "<group>";
-		};
-		824FD6532401C3AC001BDCD8 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				824FD6542401C3AC001BDCD8 /* UI Components */,
-				824FD6562401C3AC001BDCD8 /* Common */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		824FD6542401C3AC001BDCD8 /* UI Components */ = {
-			isa = PBXGroup;
-			children = (
-				824FD6552401C3AC001BDCD8 /* CornerRadiusButton.swift */,
-			);
-			path = "UI Components";
-			sourceTree = "<group>";
-		};
-		824FD6562401C3AC001BDCD8 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				824FD6572401C3AC001BDCD8 /* UIColor+HexString.swift */,
-				824FD6582401C3AC001BDCD8 /* CommonFunctions.swift */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		88E6FE45BB5E8D6E083D6F9F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,9 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07753ACD240026F000A513FA /* LaunchScreen.storyboard in Resources */,
-				07BD1DE82405060C002B2325 /* PinCodeScreen.storyboard in Resources */,
 				07753ACA240026F000A513FA /* Assets.xcassets in Resources */,
-				079773DC24068612004616C1 /* LoginScreen.storyboard in Resources */,
 				07753AC8240026EE00A513FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,45 +409,21 @@
 				079773D9240683F3004616C1 /* CoordinatorFactoryProtocol.swift in Sources */,
 				079773D8240683EF004616C1 /* R.generated.swift in Sources */,
 				43090933240290BA0030875D /* Coordinatable.swift in Sources */,
-				07BD1DE124050473002B2325 /* PinCodeScreenInteractor.swift in Sources */,
-				07BD1DDD24050473002B2325 /* PinCodeScreenViewOutput.swift in Sources */,
-				07BD1DE024050473002B2325 /* PinCodeScreenInteractorInput.swift in Sources */,
-				07BD1DDE24050473002B2325 /* PinCodeScreenViewInput.swift in Sources */,
-				07BD1DDC24050473002B2325 /* PinCodeScreenModuleInput.swift in Sources */,
 				430909482402C0A40030875D /* Constants.swift in Sources */,
 				43090922240290BA0030875D /* ModulesFactory.swift in Sources */,
-				07BD1DE224050473002B2325 /* PinCodeScreenInteractorOutput.swift in Sources */,
-				0716D9D92406ADAB00419C69 /* LoginScreenModuleOutput.swift in Sources */,
 				4309093A240290BA0030875D /* BaseCoordinator.swift in Sources */,
-				07BD1DDF24050473002B2325 /* PinCodeScreenViewController.swift in Sources */,
-				0716D9D72406ACFA00419C69 /* LoginScreenAssembly.swift in Sources */,
 				43090939240290BA0030875D /* Router.swift in Sources */,
-				0716D9D42406A66600419C69 /* PinCodeScreenModuleOutput.swift in Sources */,
 				430909422402A0940030875D /* MainCoordinatorOutput.swift in Sources */,
 				4391AC6824043EBD0093A6B6 /* AppDelegate.swift in Sources */,
 				430909402402A06B0030875D /* MainCoordinator.swift in Sources */,
-				07BD1DEA240509B6002B2325 /* PointsView.swift in Sources */,
-				07BD1E0C240526DA002B2325 /* PinCodeScreenViewType.swift in Sources */,
-				824FD6662401C3AC001BDCD8 /* CommonFunctions.swift in Sources */,
-				824FD6632401C3AC001BDCD8 /* LoginScreenViewInterface.swift in Sources */,
 				4391AC6A24043EE00093A6B6 /* ViewController.swift in Sources */,
 				4309080624028BBA0030875D /* AppCoordinator.swift in Sources */,
-				07BD1DDA24050473002B2325 /* PinCodeScreenAssembly.swift in Sources */,
 				43090921240290BA0030875D /* CoordinatorFactory.swift in Sources */,
 				43090924240290BA0030875D /* MainFactoryProtocol.swift in Sources */,
 				43090932240290BA0030875D /* Presentable.swift in Sources */,
-				07BD1DE6240505B4002B2325 /* PinCodeModuleType.swift in Sources */,
-				07BD1DDB24050473002B2325 /* PinCodeScreenPresenter.swift in Sources */,
-				824FD6652401C3AC001BDCD8 /* UIColor+HexString.swift in Sources */,
-				824FD6602401C3AC001BDCD8 /* LoginScreenInteractorIO.swift in Sources */,
-				824FD6612401C3AC001BDCD8 /* LoginScreenInteractor.swift in Sources */,
-				824FD65B2401C3AC001BDCD8 /* LoginScreenModuleInterface.swift in Sources */,
 				824C766A24044C2C0013754A /* AuthCoordinator.swift in Sources */,
-				824FD65C2401C3AC001BDCD8 /* LoginScreenPresenter.swift in Sources */,
-				824FD6642401C3AC001BDCD8 /* CornerRadiusButton.swift in Sources */,
 				824C766E24044E350013754A /* AuthCoordinatorOutput.swift in Sources */,
 				824C766C24044CA20013754A /* AuthFactory.swift in Sources */,
-				824FD6622401C3AC001BDCD8 /* LoginScreenViewController.swift in Sources */,
 				43090931240290BA0030875D /* Routable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

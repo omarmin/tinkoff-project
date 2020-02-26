@@ -1,0 +1,28 @@
+PODS:
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
+  - TinkoffAuth (0.1.0):
+    - R.swift
+
+DEPENDENCIES:
+  - R.swift (~> 5.0.0)
+  - TinkoffAuth (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - R.swift
+    - R.swift.Library
+
+EXTERNAL SOURCES:
+  TinkoffAuth:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  TinkoffAuth: 785d9b9f45b352e64a39a2857cfb8f7d04d94785
+
+PODFILE CHECKSUM: 45d563cdf2617a2f59a6cbeacde8c690c2435feb
+
+COCOAPODS: 1.8.4

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import TinkoffAuth
 
 final class AuthCoordinator: BaseCoordinator, AuthCoordinatorOutput {
     
