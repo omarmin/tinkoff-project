@@ -58,7 +58,6 @@ extension PinCodeScreenPresenter: PinCodeScreenViewOutput {
             view.showInfoLabel(text: "Введите пин-код")
             view.hideActivityIndicator()
         }
-        
     }
     
     func didTapLogout() {

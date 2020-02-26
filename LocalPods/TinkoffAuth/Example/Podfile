@@ -1,12 +1,16 @@
 platform :ios, '13.0'
 use_frameworks!
 
-target 'TinkoffProject' do
+target 'TinkoffAuth_Example' do
 
-  pod 'SwiftLint'
-  pod 'R.swift'
-  pod 'TinkoffAuth', :path => 'LocalPods/TinkoffAuth'
+  pod 'R.swift', '~> 5.0.0'
+  pod 'TinkoffAuth', :path => '../'
 
+  target 'TinkoffAuth_Tests' do
+    inherit! :search_paths
+
+    
+  end
 end
 
 pre_install do |installer|
@@ -14,7 +18,7 @@ pre_install do |installer|
         if pod_target.pod_target_srcroot.include? 'Development Pods'
             pod_target_srcroot = pod_target.pod_target_srcroot
             pod_target_path = pod_target_srcroot.sub('${PODS_ROOT}/..', '.')
-            pod_target_sources_path = pod_target_path + '/' + pod_target.name + '/Sources'
+            pod_target_sources_path = pod_target_path + '/' + pod_target.name + '/Classes'
             generated_file_path = pod_target_sources_path + '/R.generated.swift'
             File.new(generated_file_path, 'w')
         end

@@ -3,10 +3,13 @@ PODS:
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
   - SwiftLint (0.39.1)
+  - TinkoffAuth (0.1.0):
+    - R.swift
 
 DEPENDENCIES:
   - R.swift
   - SwiftLint
+  - TinkoffAuth (from `LocalPods/TinkoffAuth`)
 
 SPEC REPOS:
   trunk:
@@ -14,11 +17,16 @@ SPEC REPOS:
     - R.swift.Library
     - SwiftLint
 
+EXTERNAL SOURCES:
+  TinkoffAuth:
+    :path: LocalPods/TinkoffAuth
+
 SPEC CHECKSUMS:
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
+  TinkoffAuth: 29bed0bc353e4ac919b8e5cced023704c36b9fe5
 
-PODFILE CHECKSUM: 77ee6a60397f466fbe4d74d684e90b45dfa5f84b
+PODFILE CHECKSUM: 2d91f4cb3b4ca06afa7027380f434f221f8ecda5
 
 COCOAPODS: 1.8.4
