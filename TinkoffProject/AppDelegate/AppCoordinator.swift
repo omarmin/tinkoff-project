@@ -9,23 +9,20 @@
 import Foundation
 
 private enum LaunchInstructor {
-    case authorization, setPIN, enterPIN, main
-        
+    case authorization, main
+    
     static func setup() -> LaunchInstructor {
-        /// Здесь нужно разруливать что показывать первым делом
         return .authorization
     }
 }
 
 final class AppCoordinator: BaseCoordinator {
-
+    
     fileprivate let router: Routable
     fileprivate let factory: CoordinatorFactoryProtocol
-
-    fileprivate var instructor: LaunchInstructor {
-        return LaunchInstructor.setup()
-    }
-
+    
+    fileprivate var instructor: LaunchInstructor = LaunchInstructor.setup()
+    
     init(router: Routable, factory: CoordinatorFactory) {
         self.router  = router
         self.factory = factory
@@ -38,10 +35,6 @@ extension AppCoordinator: Coordinatable {
         switch instructor {
         case .main:
             performMainFlow()
-        case .setPIN:
-            performSetPINFlow()
-        case .enterPIN:
-            performEnterPINFlow()
         case .authorization:
             performAuthorizationFlow()
         }
@@ -50,32 +43,26 @@ extension AppCoordinator: Coordinatable {
 
 // MARK: - Private methods
 private extension AppCoordinator {
-  
-  func performMainFlow() {
-    let coordinator = factory.makeMainCoordinator(router: router)
-    coordinator.finishFlow = { [unowned self, unowned coordinator] in
-      self.removeDependency(coordinator)
-      self.start()
+    
+    func performMainFlow() {
+        let coordinator = factory.makeMainCoordinator(router: router)
+        coordinator.finishFlow = { [unowned self, unowned coordinator] in
+            self.removeDependency(coordinator)
+            self.instructor = .authorization
+            self.start()
+        }
+        addDependency(coordinator)
+        coordinator.start()
     }
-    addDependency(coordinator)
-    coordinator.start()
-  }
-  
-  func performSetPINFlow() {
-    // Start set PIN flow
-  }
-  
-  func performEnterPINFlow() {
-    // Start enter PIN flow
-  }
-  
-  func performAuthorizationFlow() {
-    let coordinator = factory.makeLoginScreenCoordinator(router: router)
-    coordinator.finishFlow = { [unowned self, unowned coordinator] in
-      self.removeDependency(coordinator)
-      self.start()
+    
+    func performAuthorizationFlow() {
+        let coordinator = factory.makeAuthCoordinator(router: router)
+        coordinator.finishFlow = { [unowned self, unowned coordinator] in
+            self.removeDependency(coordinator)
+            self.instructor = .main
+            self.start()
+        }
+        addDependency(coordinator)
+        coordinator.start()
     }
-    addDependency(coordinator)
-    coordinator.start()
-  }
 }

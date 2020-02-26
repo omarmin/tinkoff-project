@@ -36,6 +36,10 @@ final class PinCodeScreenViewController: UIViewController {
         pinCodeDidChange()
     }
     
+    @IBAction func didTapLogoutButton(_ sender: UIButton) {
+        output.didTapLogout()
+    }
+    
     private func pinCodeDidChange() {
         pointsView.fill(numberOfPoints: pinCode.count)
         

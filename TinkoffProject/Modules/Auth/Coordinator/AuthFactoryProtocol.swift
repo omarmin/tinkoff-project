@@ -10,4 +10,8 @@ import Foundation
 
 protocol AuthFactoryProtocol {
     func makeLoginViewWithCoordinator(coordinator: AuthCoordinator) -> LoginScreenViewController
+    func makePinCodeView(
+        coordinator: AuthCoordinator,
+        configure: PinCodeScreenAssembly.PinCodeScreenModuleConfiguration
+    ) -> PinCodeScreenViewController
 }

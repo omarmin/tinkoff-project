@@ -28,18 +28,33 @@ extension AuthCoordinator: Coordinatable {
     }
     
     func showMainScreen() {
-        //implement transition to main screen
+        finishFlow?()
+    }
+    
+    func showLoginScreen() {
+        let view = factory.makeLoginViewWithCoordinator(coordinator: self)
+        router.setRootModule(view, hideBar: true)
     }
     
     func showPinCodeScreen() {
-        //implement transition to pin screen
+        let view = factory.makePinCodeView(coordinator: self) { moduleInput in
+            moduleInput.configure(with: .create)
+        }
+        router.push(view)
     }
 }
 
 // MARK: - Private methods
 private extension AuthCoordinator {
     func performFlow() {
-        let view = factory.makeLoginViewWithCoordinator(coordinator: self)
-        router.setRootModule(view, hideBar: true)
+        if UserDefaults.standard.string(forKey: "PinCode") != nil {
+            let view = factory.makePinCodeView(coordinator: self) { moduleInput in
+                moduleInput.configure(with: .enter)
+            }
+            router.setRootModule(view, hideBar: true)
+        } else {
+            let view = factory.makeLoginViewWithCoordinator(coordinator: self)
+            router.setRootModule(view, hideBar: true)
+        }
     }
 }

@@ -13,24 +13,35 @@ final class ModulesFactory {}
 // MARK: - MainFactoryProtocol
 extension ModulesFactory: MainFactoryProtocol {
     func makeMainView() -> ViewController {
-        let view: ViewController = ViewController()
-        return view
+        let mainView: ViewController = ViewController()
+        mainView.view.backgroundColor = .red
+        return mainView
     }
 }
 
-extension ModulesFactory: LoginScreenFactoryProtocol {
-  func makeLoginViewWithCoordinator(coordinator: LoginScreenCoordinator) -> LoginScreenViewController {
-    let loginSceenWireframe = LoginScreenWireframe()
-    let loginScreenPresenter = LoginScreenPresenter()
-    let loginScreenInteractor = LoginScreenInteractor()
-    let loginScreenViewController = loginSceenWireframe.loginScreenViewControllerFromStoryboard()
-    loginScreenViewController.eventHandler = loginScreenPresenter
-    loginScreenPresenter.view = loginScreenViewController
-    loginScreenPresenter.interactor = loginScreenInteractor
-    loginScreenPresenter.wireframe = loginSceenWireframe
-    loginSceenWireframe.coordinator = coordinator
-    loginScreenInteractor.output = loginScreenPresenter
+// MARK: - AuthFactoryProtocol
+extension ModulesFactory: AuthFactoryProtocol {
+    func makeLoginViewWithCoordinator(coordinator: AuthCoordinator) -> LoginScreenViewController {
+        let loginSceenWireframe = LoginScreenWireframe()
+        let loginScreenPresenter = LoginScreenPresenter()
+        let loginScreenInteractor = LoginScreenInteractor()
+        let loginScreenViewController = loginSceenWireframe.loginScreenViewControllerFromStoryboard()
+        loginScreenViewController.eventHandler = loginScreenPresenter
+        loginScreenPresenter.view = loginScreenViewController
+        loginScreenPresenter.interactor = loginScreenInteractor
+        loginScreenPresenter.wireframe = loginSceenWireframe
+        loginSceenWireframe.coordinator = coordinator
+        loginScreenInteractor.output = loginScreenPresenter
+        
+        return loginScreenViewController
+    }
     
-    return loginScreenViewController
-  }
+    func makePinCodeView(
+        coordinator: AuthCoordinator,
+        configure: PinCodeScreenAssembly.PinCodeScreenModuleConfiguration
+    ) -> PinCodeScreenViewController {
+        let pinCodeView = R.storyboard.pinCodeScreen.instantiateInitialViewController()!
+        PinCodeScreenAssembly.assembly(with: pinCodeView, coordinator: coordinator, configure: configure)
+        return pinCodeView
+    }
 }

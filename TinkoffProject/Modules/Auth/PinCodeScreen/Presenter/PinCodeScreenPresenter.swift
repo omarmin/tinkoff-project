@@ -60,25 +60,28 @@ extension PinCodeScreenPresenter: PinCodeScreenViewOutput {
         }
         
     }
-
+    
+    func didTapLogout() {
+        UserDefaults.standard.set(nil, forKey: "PinCode")
+        router.showLoginScreen()
+    }
 }
 
 // MARK: - PinCodeScreenInteractorOutput
 extension PinCodeScreenPresenter: PinCodeScreenInteractorOutput {
+    
     func didVerifyPinCodeSuccessfully() {
         view.hideActivityIndicator()
-        
-        #warning("Go to main")
+        router.showMainScreen()
     }
     
     func didVerifyPinCode(error: Error) {
-        
+        view.resetViewState(type: .input)
+        view.showWrongPinCodeViewState()
     }
     
     func didSavePinCodeSuccessfully() {
         view.hideActivityIndicator()
-        
-        #warning("Go to main")
+        router.showMainScreen()
     }
-    
 }
