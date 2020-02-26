@@ -15,7 +15,7 @@ extension PinCodeScreenInteractor: PinCodeScreenInteractorInput {
                 self?.output.didVerifyPinCodeSuccessfully()
             } else {
                 let error = NSError(domain: "", code: 999, userInfo: nil)
-                self?.output.didVerifyPinCode(error: error)
+                self?.output.didFinishVerificationWithError(error)
             }
         }
     }

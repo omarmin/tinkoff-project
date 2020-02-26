@@ -45,7 +45,7 @@
 		4391AC6824043EBD0093A6B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4391AC6624043EBD0093A6B6 /* AppDelegate.swift */; };
 		4391AC6A24043EE00093A6B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4391AC6924043EE00093A6B6 /* ViewController.swift */; };
 		824C766A24044C2C0013754A /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824C766924044C2C0013754A /* AuthCoordinator.swift */; };
-		824C766C24044CA20013754A /* AuthFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824C766B24044CA20013754A /* AuthFactoryProtocol.swift */; };
+		824C766C24044CA20013754A /* AuthFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824C766B24044CA20013754A /* AuthFactory.swift */; };
 		824C766E24044E350013754A /* AuthCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824C766D24044E350013754A /* AuthCoordinatorOutput.swift */; };
 		824FD65B2401C3AC001BDCD8 /* LoginScreenModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824FD6462401C3AC001BDCD8 /* LoginScreenModuleInterface.swift */; };
 		824FD65C2401C3AC001BDCD8 /* LoginScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824FD6482401C3AC001BDCD8 /* LoginScreenPresenter.swift */; };
@@ -101,7 +101,7 @@
 		5134517CCD3B494870E96E24 /* Pods-TinkoffProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinkoffProject.release.xcconfig"; path = "Target Support Files/Pods-TinkoffProject/Pods-TinkoffProject.release.xcconfig"; sourceTree = "<group>"; };
 		62D9A3AA71B28219B8E20BA4 /* Pods_TinkoffProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinkoffProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		824C766924044C2C0013754A /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
-		824C766B24044CA20013754A /* AuthFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFactoryProtocol.swift; sourceTree = "<group>"; };
+		824C766B24044CA20013754A /* AuthFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFactory.swift; sourceTree = "<group>"; };
 		824C766D24044E350013754A /* AuthCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinatorOutput.swift; sourceTree = "<group>"; };
 		824FD6462401C3AC001BDCD8 /* LoginScreenModuleInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenModuleInterface.swift; sourceTree = "<group>"; };
 		824FD6482401C3AC001BDCD8 /* LoginScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenPresenter.swift; sourceTree = "<group>"; };
@@ -351,7 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				824C766924044C2C0013754A /* AuthCoordinator.swift */,
-				824C766B24044CA20013754A /* AuthFactoryProtocol.swift */,
+				824C766B24044CA20013754A /* AuthFactory.swift */,
 				824C766D24044E350013754A /* AuthCoordinatorOutput.swift */,
 			);
 			path = Coordinator;
@@ -654,7 +654,7 @@
 				824FD65C2401C3AC001BDCD8 /* LoginScreenPresenter.swift in Sources */,
 				824FD6642401C3AC001BDCD8 /* CornerRadiusButton.swift in Sources */,
 				824C766E24044E350013754A /* AuthCoordinatorOutput.swift in Sources */,
-				824C766C24044CA20013754A /* AuthFactoryProtocol.swift in Sources */,
+				824C766C24044CA20013754A /* AuthFactory.swift in Sources */,
 				824FD6622401C3AC001BDCD8 /* LoginScreenViewController.swift in Sources */,
 				43090931240290BA0030875D /* Routable.swift in Sources */,
 			);

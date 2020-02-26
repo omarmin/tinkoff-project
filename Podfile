@@ -5,7 +5,7 @@ target 'TinkoffProject' do
 
   pod 'SwiftLint'
   pod 'R.swift'
-  pod 'TinkoffAuth', :path => 'LocalPods/TinkoffAuth'
+#  pod 'TinkoffAuth', :path => 'LocalPods/TinkoffAuth'
 
 end
 

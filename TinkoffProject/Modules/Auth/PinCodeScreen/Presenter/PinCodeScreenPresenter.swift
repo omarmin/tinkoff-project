@@ -75,7 +75,7 @@ extension PinCodeScreenPresenter: PinCodeScreenInteractorOutput {
         moduleOutput?.showMainScreen()
     }
     
-    func didVerifyPinCode(error: Error) {
+    func didFinishVerificationWithError(_: Error) {
         view.resetViewState(type: .input)
         view.showWrongPinCodeViewState()
     }

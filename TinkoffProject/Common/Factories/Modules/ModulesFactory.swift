@@ -18,21 +18,3 @@ extension ModulesFactory: MainFactoryProtocol {
         return mainView
     }
 }
-
-// MARK: - AuthFactoryProtocol
-extension ModulesFactory: AuthFactoryProtocol {
-    func makeLoginViewWithCoordinator(coordinator: AuthCoordinator) -> LoginScreenViewController {
-        let loginScreenViewController = R.storyboard.loginScreen.loginScreenViewController()!
-        LoginScreenAssembly.assembly(with: loginScreenViewController, moduleOutput: coordinator)
-        return loginScreenViewController
-    }
-    
-    func makePinCodeView(
-        coordinator: AuthCoordinator,
-        configure: PinCodeScreenAssembly.PinCodeScreenModuleConfiguration
-    ) -> PinCodeScreenViewController {
-        let pinCodeViewController = R.storyboard.pinCodeScreen.instantiateInitialViewController()!
-        PinCodeScreenAssembly.assembly(with: pinCodeViewController, moduleOutput: coordinator, configure: configure)
-        return pinCodeViewController
-    }
-}
