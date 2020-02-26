@@ -1,6 +1,6 @@
 import Foundation
 
-protocol PinCodeScreenRouterInput {
+public protocol PinCodeScreenModuleOutput: class {
     func showLoginScreen()
     func showMainScreen()
 }

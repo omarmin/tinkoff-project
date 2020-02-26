@@ -5,7 +5,7 @@ final class PinCodeScreenPresenter {
     // MARK: Properties
     weak var view: PinCodeScreenViewInput!
     var interactor: PinCodeScreenInteractorInput!
-    var router: PinCodeScreenRouterInput!
+    weak var moduleOutput: PinCodeScreenModuleOutput?
     var pinCodeType: PinCodeModuleType = .enter
     
     var pinCode = ""
@@ -63,7 +63,7 @@ extension PinCodeScreenPresenter: PinCodeScreenViewOutput {
     
     func didTapLogout() {
         UserDefaults.standard.set(nil, forKey: "PinCode")
-        router.showLoginScreen()
+        moduleOutput?.showLoginScreen()
     }
 }
 
@@ -72,7 +72,7 @@ extension PinCodeScreenPresenter: PinCodeScreenInteractorOutput {
     
     func didVerifyPinCodeSuccessfully() {
         view.hideActivityIndicator()
-        router.showMainScreen()
+        moduleOutput?.showMainScreen()
     }
     
     func didVerifyPinCode(error: Error) {
@@ -82,6 +82,6 @@ extension PinCodeScreenPresenter: PinCodeScreenInteractorOutput {
     
     func didSavePinCodeSuccessfully() {
         view.hideActivityIndicator()
-        router.showMainScreen()
+        moduleOutput?.showMainScreen()
     }
 }

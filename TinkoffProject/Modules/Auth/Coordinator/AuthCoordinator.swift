@@ -26,22 +26,6 @@ extension AuthCoordinator: Coordinatable {
     func start() {
         performFlow()
     }
-    
-    func showMainScreen() {
-        finishFlow?()
-    }
-    
-    func showLoginScreen() {
-        let view = factory.makeLoginViewWithCoordinator(coordinator: self)
-        router.setRootModule(view, hideBar: true)
-    }
-    
-    func showPinCodeScreen() {
-        let view = factory.makePinCodeView(coordinator: self) { moduleInput in
-            moduleInput.configure(with: .create)
-        }
-        router.push(view)
-    }
 }
 
 // MARK: - Private methods
@@ -56,5 +40,30 @@ private extension AuthCoordinator {
             let view = factory.makeLoginViewWithCoordinator(coordinator: self)
             router.setRootModule(view, hideBar: true)
         }
+    }
+}
+
+// MARK: - PinCodeScreenModuleOutput
+extension AuthCoordinator: PinCodeScreenModuleOutput {
+    func showLoginScreen() {
+        let view = factory.makeLoginViewWithCoordinator(coordinator: self)
+        router.setRootModule(view, hideBar: true)
+    }
+}
+
+// MARK: - LoginScreenModuleOutput
+extension AuthCoordinator: LoginScreenModuleOutput {
+    func showPinScreen() {
+        let view = factory.makePinCodeView(coordinator: self) { moduleInput in
+            moduleInput.configure(with: .create)
+        }
+        router.push(view)
+    }
+}
+
+// MARK: - PinCodeScreenModuleOutput & LoginScreenModuleOutput
+extension AuthCoordinator {
+    func showMainScreen() {
+        finishFlow?()
     }
 }

@@ -3,6 +3,7 @@ warning_threshold: 15
 excluded:
 - Pods
 - R.generated.swift
+- LocalPods
 
 disabled_rules:
 - trailing_whitespace

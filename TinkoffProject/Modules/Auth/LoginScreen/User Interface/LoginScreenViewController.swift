@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginScreenViewController: UIViewController {
+public class LoginScreenViewController: UIViewController {
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -32,7 +32,7 @@ class LoginScreenViewController: UIViewController {
     var eventHandler: LoginScreenModuleInterface!
     
     // MARK: - Lifecycle
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         resetContent()
         initKeyboardHandling()
@@ -40,7 +40,7 @@ class LoginScreenViewController: UIViewController {
         setNextButtonEnabled(state: false)
     }
     
-    override func viewDidLayoutSubviews() {
+    override public func viewDidLayoutSubviews() {
         nextButton.layoutSubviews()
     }
     
@@ -155,7 +155,7 @@ class LoginScreenViewController: UIViewController {
 
 // MARK: - LoginScreenViewInterface
 extension LoginScreenViewController: LoginScreenViewInterface {
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    override public var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.portrait
     }
     

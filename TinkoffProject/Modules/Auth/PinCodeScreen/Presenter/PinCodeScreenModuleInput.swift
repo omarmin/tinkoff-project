@@ -1,5 +1,5 @@
 import Foundation
 
-protocol PinCodeScreenModuleInput {
+public protocol PinCodeScreenModuleInput {
     func configure(with pinCodeType: PinCodeModuleType)
 }

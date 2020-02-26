@@ -1,6 +1,6 @@
 import Foundation
 
-enum PinCodeModuleType {
+public enum PinCodeModuleType {
     case enter
     case create
 }

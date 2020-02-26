@@ -1,6 +1,6 @@
 import UIKit
 
-final class PinCodeScreenViewController: UIViewController {
+public final class PinCodeScreenViewController: UIViewController {
 
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var pointsView: PointsView!
@@ -16,7 +16,7 @@ final class PinCodeScreenViewController: UIViewController {
     var type: PinCodeScreenViewType = .input
 
     // MARK: Life cycle
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         output.didTriggerViewReadyEvent()
     }
