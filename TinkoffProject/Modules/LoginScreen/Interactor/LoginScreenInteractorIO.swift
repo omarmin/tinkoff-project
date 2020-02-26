@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol LoginScreenInteractorInput {
-  func checkUserWithCredentials(login: String, pass: String)
+protocol LoginScreenInteractorInput: class {
+    func checkUserWithCredentials(login: String, pass: String)
 }
 
-protocol LoginScreenInteractorOutput {
-  func userSuccessfullyAuthenticated(userInfo: [String: Any])
-  func userAuthenticationError(error: Error)
+protocol LoginScreenInteractorOutput: class {
+    func userSuccessfullyAuthenticated(userInfo: [String: Any])
+    func userAuthenticationError(error: Error)
 }

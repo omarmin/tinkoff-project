@@ -9,7 +9,7 @@
 import Foundation
 
 protocol LoginScreenWireframeInput: class {
-   func showPinScreen()
-   func showMainScreen()
-   func loginScreenViewControllerFromStoryboard() -> LoginScreenViewController
+    func showPinScreen()
+    func showMainScreen()
+    func loginScreenViewControllerFromStoryboard() -> LoginScreenViewController
 }

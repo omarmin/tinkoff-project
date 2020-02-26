@@ -9,6 +9,6 @@
 import Foundation
 
 protocol LoginScreenModuleInterface: class {
-  func checkUserWithCredentials(login: String, pass: String)
-  func userChangedPinToggle(state: Bool)
+    func checkUserWithCredentials(login: String, pass: String)
+    func userChangedPinToggle(state: Bool)
 }

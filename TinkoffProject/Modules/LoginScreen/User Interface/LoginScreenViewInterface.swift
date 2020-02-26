@@ -9,10 +9,10 @@
 import Foundation
 
 protocol LoginScreenViewInterface: class {
-  func resetContent()
-  func showLoadingIndicator()
-  func hideLoadingIndicator()
-  func setNextButtonEnabled(state: Bool)
-  func showErrorMessage(text: String)
-  func setInputEnabled(status: Bool)
+    func resetContent()
+    func showLoadingIndicator()
+    func hideLoadingIndicator()
+    func setNextButtonEnabled(state: Bool)
+    func showErrorMessage(text: String)
+    func setInputEnabled(status: Bool)
 }

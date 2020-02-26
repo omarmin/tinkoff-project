@@ -15,7 +15,7 @@
         <!--Login Screen View Controller-->
         <scene sceneID="nbF-se-pKT">
             <objects>
-                <viewController storyboardIdentifier="loginScreenViewController" modalPresentationStyle="fullScreen" id="prd-tE-yko" userLabel="Login Screen View Controller" customClass="LoginScreenViewController" customModule="TinkoffTeamFive" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginScreenViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="prd-tE-yko" userLabel="Login Screen View Controller" customClass="LoginScreenViewController" customModule="TinkoffProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2bx-X5-MPr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,7 +70,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbG-6w-bsy" userLabel="Next" customClass="CornerRadiusButton" customModule="TinkoffTeamFive" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbG-6w-bsy" userLabel="Next" customClass="CornerRadiusButton" customModule="TinkoffProject" customModuleProvider="target">
                                         <rect key="frame" x="48" y="476.5" width="318" height="46"/>
                                         <color key="backgroundColor" red="1" green="0.8666666666666667" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>

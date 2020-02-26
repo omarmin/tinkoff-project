@@ -9,25 +9,18 @@
 import UIKit
 
 class LoginScreenWireframe: LoginScreenWireframeInput {
-  private let loginScreenStoryboardName = "LoginScreen"
-  private let loginScreenViewControllerID = "loginScreenViewController"
-  
-  var coordinator: LoginScreenCoordinator!
-  var loginScreenPresenter: LoginScreenPresenter!
-  
-  func showPinScreen() {
-    coordinator.showPinCodeScreen()
-  }
-  
-  func showMainScreen() {
-    coordinator.showMainScreen()
-  }
-  
-  func loginScreenViewControllerFromStoryboard() -> LoginScreenViewController {
-    return loginScreenStoryboard().instantiateViewController(identifier: loginScreenViewControllerID)
-  }
-  
-  private func loginScreenStoryboard() -> UIStoryboard {
-    return UIStoryboard.init(name: loginScreenStoryboardName, bundle: Bundle.main)
-  }
+    var coordinator: LoginScreenCoordinator!
+    var loginScreenPresenter: LoginScreenPresenter!
+    
+    func showPinScreen() {
+        coordinator.showPinCodeScreen()
+    }
+    
+    func showMainScreen() {
+        coordinator.showMainScreen()
+    }
+    
+    func loginScreenViewControllerFromStoryboard() -> LoginScreenViewController {
+        return R.storyboard.loginScreen.loginScreenViewController() ?? LoginScreenViewController()
+    }
 }
