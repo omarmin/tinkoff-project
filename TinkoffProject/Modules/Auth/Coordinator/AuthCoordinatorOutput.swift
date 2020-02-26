@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol LoginScreenCoordinatorOutput: class {
+protocol AuthCoordinatorOutput: class {
     var finishFlow: CompletionBlock? { get set }
 }

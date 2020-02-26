@@ -3,8 +3,7 @@ warning_threshold: 15
 excluded:
 - Pods
 - R.generated.swift
-- TinkoffProject/AppDelegate.swift
-- TinkoffProject/SceneDelegate.swift
+- LocalPods
 
 disabled_rules:
 - trailing_whitespace

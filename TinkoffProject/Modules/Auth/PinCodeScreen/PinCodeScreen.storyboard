@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BWN-H2-xE9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pin Code Screen View Controller-->
+        <scene sceneID="5JW-Lx-IpC">
+            <objects>
+                <viewController id="BWN-H2-xE9" customClass="PinCodeScreenViewController" customModule="TinkoffProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hqw-S1-Xe9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="u0J-xJ-l9K">
+                                <rect key="frame" x="40" y="420" width="334" height="422"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5Zu-fX-9wz">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="98"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EsM-pG-kmk">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="EsM-pG-kmk" secondAttribute="height" multiplier="1:1" id="pmW-r4-xTe"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="1"/>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="BWN-H2-xE9" eventType="touchUpInside" id="Dcg-Fd-bWv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lu7-Uq-t0B">
+                                                <rect key="frame" x="118" y="0.0" width="98" height="98"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="2"/>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="BWN-H2-xE9" eventType="touchUpInside" id="QA2-hM-SpQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXo-kY-Yz4">
+                                                <rect key="frame" x="236" y="0.0" width="98" height="98"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="3"/>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="BWN-H2-xE9" eventType="touchUpInside" id="Ar9-nU-UF3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hpb-I2-q89">
+                                        <rect key="frame" x="0.0" y="108" width="334" height="98"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OjH-XW-0O0">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="4"/>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="BWN-H2-xE9" eventType="touchUpInside" id="67y-OM-HJJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUB-Vv-Ggb">
+                                                <rect key="frame" x="118" y="0.0" width="98" height="98"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="BWN-H2-xE9" eventType="touchUpInside" id="TOQ-C6-5EW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prL-mO-aC3">
+                                                <rect key="frame" x="236" y="0.0" width="98" height="98"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="6"/>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="BWN-H2-xE9" eventType="touchUpInside" id="PY8-0U-AYi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="f9B-AB-IAy">
+                                        <rect key="frame" x="0.0" y="216" width="334" height="98"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPQ-0B-I5t">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="7"/>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="BWN-H2-xE9" eventType="touchUpInside" id="gMx-I7-f4F"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZ3-Dp-0hE">
+                                                <rect key="frame" x="118" y="0.0" width="98" height="98"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="8"/>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="BWN-H2-xE9" eventType="touchUpInside" id="blC-tq-plS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfJ-Ku-2gp">
+                                                <rect key="frame" x="236" y="0.0" width="98" height="98"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="9"/>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="BWN-H2-xE9" eventType="touchUpInside" id="XKV-9M-Ex2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="04o-bt-J3b">
+                                        <rect key="frame" x="0.0" y="324" width="334" height="98"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2c-6B-bdr">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
+                                                <state key="normal" title="Выйти"/>
+                                                <connections>
+                                                    <action selector="didTapLogoutButton:" destination="BWN-H2-xE9" eventType="touchUpInside" id="H3C-DV-FJN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dh4-Un-6Ar">
+                                                <rect key="frame" x="118" y="0.0" width="98" height="98"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="0"/>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="BWN-H2-xE9" eventType="touchUpInside" id="9Ip-k9-PcP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9C-7y-I7r">
+                                                <rect key="frame" x="236" y="0.0" width="98" height="98"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="&lt;"/>
+                                                <connections>
+                                                    <action selector="didTapRemoveButton:" destination="BWN-H2-xE9" eventType="touchUpInside" id="auJ-hD-lok"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите пин-код" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9h-4M-BzL">
+                                <rect key="frame" x="139" y="84" width="136.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bJ6-k7-xaf">
+                                <rect key="frame" x="188.5" y="174.5" width="37" height="37"/>
+                                <color key="color" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTk-KO-mqm" customClass="PointsView" customModule="TinkoffProject" customModuleProvider="target">
+                                <rect key="frame" x="137" y="134.5" width="140" height="20"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="pointsCount">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="pointSize">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="O9h-4M-BzL" firstAttribute="top" secondItem="KeR-1K-Rkz" secondAttribute="top" constant="40" id="2IF-ku-k2O"/>
+                            <constraint firstItem="bJ6-k7-xaf" firstAttribute="centerX" secondItem="hqw-S1-Xe9" secondAttribute="centerX" id="5zk-bO-8x2"/>
+                            <constraint firstItem="bJ6-k7-xaf" firstAttribute="top" secondItem="UTk-KO-mqm" secondAttribute="bottom" constant="20" id="EPD-bY-d0l"/>
+                            <constraint firstItem="KeR-1K-Rkz" firstAttribute="trailing" secondItem="u0J-xJ-l9K" secondAttribute="trailing" constant="40" id="Edq-Wx-in4"/>
+                            <constraint firstItem="UTk-KO-mqm" firstAttribute="centerX" secondItem="hqw-S1-Xe9" secondAttribute="centerX" id="HPM-S5-H2a"/>
+                            <constraint firstItem="O9h-4M-BzL" firstAttribute="centerX" secondItem="hqw-S1-Xe9" secondAttribute="centerX" id="Pyy-7O-svB"/>
+                            <constraint firstItem="KeR-1K-Rkz" firstAttribute="bottom" secondItem="u0J-xJ-l9K" secondAttribute="bottom" constant="20" id="TEs-Eb-FXk"/>
+                            <constraint firstItem="UTk-KO-mqm" firstAttribute="top" secondItem="O9h-4M-BzL" secondAttribute="bottom" constant="30" id="Ugf-mr-CoM"/>
+                            <constraint firstItem="u0J-xJ-l9K" firstAttribute="leading" secondItem="KeR-1K-Rkz" secondAttribute="leading" constant="40" id="lkd-PK-th6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KeR-1K-Rkz"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="bJ6-k7-xaf" id="ptf-Nl-k1d"/>
+                        <outlet property="infoLabel" destination="O9h-4M-BzL" id="vCY-N1-PKb"/>
+                        <outlet property="pointsView" destination="UTk-KO-mqm" id="Jgn-4n-l3G"/>
+                        <outletCollection property="buttons" destination="EsM-pG-kmk" collectionClass="NSMutableArray" id="5Cu-0p-HaH"/>
+                        <outletCollection property="buttons" destination="Lu7-Uq-t0B" collectionClass="NSMutableArray" id="D7P-m2-ZxW"/>
+                        <outletCollection property="buttons" destination="PXo-kY-Yz4" collectionClass="NSMutableArray" id="ZI6-dm-C0n"/>
+                        <outletCollection property="buttons" destination="OjH-XW-0O0" collectionClass="NSMutableArray" id="8Mb-A7-PRN"/>
+                        <outletCollection property="buttons" destination="xUB-Vv-Ggb" collectionClass="NSMutableArray" id="6hD-CM-gyr"/>
+                        <outletCollection property="buttons" destination="prL-mO-aC3" collectionClass="NSMutableArray" id="6uO-Fb-BQk"/>
+                        <outletCollection property="buttons" destination="hPQ-0B-I5t" collectionClass="NSMutableArray" id="3hk-Be-sf3"/>
+                        <outletCollection property="buttons" destination="bZ3-Dp-0hE" collectionClass="NSMutableArray" id="KDO-ij-2Sl"/>
+                        <outletCollection property="buttons" destination="JfJ-Ku-2gp" collectionClass="NSMutableArray" id="wkZ-5i-74k"/>
+                        <outletCollection property="buttons" destination="b2c-6B-bdr" collectionClass="NSMutableArray" id="JOa-tI-qE7"/>
+                        <outletCollection property="buttons" destination="dh4-Un-6Ar" collectionClass="NSMutableArray" id="B11-GI-Qt9"/>
+                        <outletCollection property="buttons" destination="S9C-7y-I7r" collectionClass="NSMutableArray" id="P98-a9-RoA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PbP-91-Dkm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="250.72463768115944" y="119.86607142857142"/>
+        </scene>
+    </scenes>
+</document>

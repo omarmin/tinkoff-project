@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginScreenViewController: UIViewController {
+public class LoginScreenViewController: UIViewController {
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -31,8 +31,8 @@ class LoginScreenViewController: UIViewController {
     
     var eventHandler: LoginScreenModuleInterface!
     
-    // MARK: -Lifecycle
-    override func viewDidLoad() {
+    // MARK: - Lifecycle
+    override public func viewDidLoad() {
         super.viewDidLoad()
         resetContent()
         initKeyboardHandling()
@@ -40,11 +40,11 @@ class LoginScreenViewController: UIViewController {
         setNextButtonEnabled(state: false)
     }
     
-    override func viewDidLayoutSubviews() {
+    override public func viewDidLayoutSubviews() {
         nextButton.layoutSubviews()
     }
     
-    // MARK: -Private methods
+    // MARK: - Private methods
     private func setupPlaceholders() {
         let placeholders: [UILabel] = [loginPlaceholder, passwordPlaceholder]
         
@@ -116,7 +116,7 @@ class LoginScreenViewController: UIViewController {
         scrollView?.endEditing(true)
     }
     
-    // MARK: -IBActions
+    // MARK: - IBActions
     @IBAction func loginFieldDidChange(_ sender: Any) {
         isLoginValid = CommonFunctions.validateLogin(login: loginTextField?.text ?? "")
         setNextButtonEnabled(state: isLoginValid && isPassValid)
@@ -153,9 +153,9 @@ class LoginScreenViewController: UIViewController {
     }
 }
 
-// MARK: -LoginScreenViewInterface
+// MARK: - LoginScreenViewInterface
 extension LoginScreenViewController: LoginScreenViewInterface {
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    override public var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.portrait
     }
     
@@ -191,4 +191,3 @@ extension LoginScreenViewController: LoginScreenViewInterface {
         pinSwitch.isUserInteractionEnabled = status
     }
 }
-

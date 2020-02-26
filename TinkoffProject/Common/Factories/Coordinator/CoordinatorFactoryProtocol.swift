@@ -10,7 +10,5 @@ import UIKit
 
 protocol CoordinatorFactoryProtocol {
     func makeMainCoordinator(router: Routable) -> Coordinatable & MainCoordinatorOutput
-//    func makeSetPINCoordinator(router: Routable) -> Coordinatable & SetPINCoordinatorOutput
-//    func makeEnterPINCoordinator(router: Routable) -> Coordinatable & EnterPINCoordinatorOutput
-    func makeLoginScreenCoordinator(router: Routable) -> Coordinatable & LoginScreenCoordinatorOutput
+    func makeAuthCoordinator(router: Routable) -> Coordinatable & AuthCoordinatorOutput
 }

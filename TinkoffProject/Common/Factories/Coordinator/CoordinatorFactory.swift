@@ -10,6 +10,7 @@ import UIKit
 
 final class CoordinatorFactory {
     fileprivate let modulesFactory = ModulesFactory()
+    fileprivate let authFactory = AuthFactory()
 }
 
 // MARK: - CoordinatorFactoryProtocol
@@ -18,7 +19,7 @@ extension CoordinatorFactory: CoordinatorFactoryProtocol {
     return MainCoordinator(with: modulesFactory, router: router)
   }
   
-  func makeLoginScreenCoordinator(router: Routable) -> Coordinatable & LoginScreenCoordinatorOutput {
-    return LoginScreenCoordinator(with: modulesFactory, router: router)
+  func makeAuthCoordinator(router: Routable) -> Coordinatable & AuthCoordinatorOutput {
+    return AuthCoordinator(with: authFactory, router: router)
   }
 }
