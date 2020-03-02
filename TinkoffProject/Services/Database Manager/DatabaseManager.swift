@@ -59,9 +59,10 @@ class DatabaseManager {
     }
   }
   
-  func readAllTickers() -> [Ticker]? {
-    var result: [Ticker] = []
-    let fetchRequest = NSFetchRequest<Ticker>(entityName: tickerEntityName)
+  func readAll<T: NSManagedObject>(entity: T.Type) -> [T]? {
+    var result: [T] = []
+    let entityName = String(describing: entity)
+    let fetchRequest = NSFetchRequest<T>(entityName: entityName)
     
     do {
       result = try managedContext.fetch(fetchRequest)
@@ -71,8 +72,9 @@ class DatabaseManager {
     return result
   }
   
-  func deleteAllTickers() {
-    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: tickerEntityName)
+  func deleteAll<T: NSManagedObject>(entity: T.Type) {
+    let entityName = String(describing: entity)
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
     let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
     
     do {
