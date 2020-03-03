@@ -13,18 +13,18 @@ import CoreData
 public class Ticker: NSManagedObject {}
 
 extension Ticker: ManagedObjectProtocol {
-    func toEntity() -> TickerData? {
-        return TickerData(description: tickerDescription,
-                          symbol: symbol,
-                          displaySymbol: displaySymbol)
-    }
+  func toEntity() -> TickerData? {
+    return TickerData(description: tickerDescription,
+                      symbol: symbol,
+                      displaySymbol: displaySymbol)
+  }
 }
 
 extension TickerData: ManagedObjectConvertible {
-    func toManagedObject(in context: NSManagedObjectContext) -> Ticker? {
-        let ticker = Ticker.getOrCreateSingle(with: symbol, from: context)
-        ticker.displaySymbol = displaySymbol
-        ticker.tickerDescription = description
-        return ticker
-    }
+  func toManagedObject(in context: NSManagedObjectContext) -> Ticker? {
+    let ticker = Ticker.getOrCreateSingle(withKeyPath: "symbol", withID: symbol, from: context)
+    ticker.displaySymbol = displaySymbol
+    ticker.tickerDescription = description
+    return ticker
+  }
 }

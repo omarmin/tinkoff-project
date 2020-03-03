@@ -9,38 +9,56 @@
 import Foundation
 
 protocol TickerDataControllerProtocol {
-    func fetchTickerDataWith(symbol: String, completion: @escaping (TickerData?) -> Void)
-    func updateTicker(name: String?, username: String?)
+  func fetchTickerDataWith(symbol: String, completion: @escaping (TickerData?) -> Void)
+  func fetchAllTickers(completion: @escaping ([TickerData?]) -> Void)
+  func createOrUpdateTicker(symbol: String, displaySymbol: String?, description: String?)
+  func deleteAll()
 }
 
 class TickerDataController: TickerDataControllerProtocol {
-    let worker: CoreDataWorkerProtocol
-    private var currentTickerData: TickerData?
+  let worker: CoreDataWorkerProtocol
+  
+  init(worker: CoreDataWorkerProtocol = CoreDataWorker()) {
+    self.worker = worker
+  }
+  
+  func fetchTickerDataWith(symbol: String, completion: @escaping (TickerData?) -> Void) {
+    let predicate = NSPredicate(format: "symbol == %@", symbol)
     
-    init(worker: CoreDataWorkerProtocol = CoreDataWorker()) {
-        self.worker = worker
+    worker.get(with: predicate, sortDescriptors: nil, fetchLimit: nil) { (result: Result<[TickerData], Error>) in
+      switch result {
+      case .success(let tickers):
+        completion(tickers.first)
+      case .failure(let error):
+        print("\(error)")
+        completion(nil)
+      }
     }
-    
-    func fetchTickerDataWith(symbol: String, completion: @escaping (TickerData?) -> Void) {
-        let predicate = NSPredicate(format: "identifier == %@", symbol)
-
-        worker.get(with: predicate, sortDescriptors: nil, fetchLimit: .max) { [weak self] (result: Result<[TickerData], Error>) in
-            switch result {
-            case .success(let tickers):
-                self?.currentTickerData = tickers.first
-                completion(tickers.first)
-            case .failure(let error):
-                print("\(error)")
-                completion(nil)
-            }
-        }
+  }
+  
+  func fetchAllTickers(completion: @escaping ([TickerData?]) -> Void) {
+    worker.get {(result: Result<[TickerData], Error>) in
+      switch result {
+      case .success(let tickers):
+        completion(tickers)
+      case .failure(let error):
+        print("\(error)")
+        completion([])
+      }
     }
-    
-    func updateTicker(name: String?, username: String?) {
-        let tickerData: TickerData = currentTickerData ?? TickerData(description: "Dummy ticker", symbol: "DT", displaySymbol: "DTR")
-        worker.upsert(entities: [tickerData]) { (error) in
-            guard let error = error else { return }
-            print("\(error)")
-        }
+  }
+  
+  func createOrUpdateTicker(symbol: String, displaySymbol: String?, description: String?) {
+    let tickerData = TickerData(description: description,
+                                symbol: symbol,
+                                displaySymbol: displaySymbol)
+    worker.createOrUpdate(entities: [tickerData]) { (error) in
+      guard let error = error else { return }
+      print("\(error)")
     }
+  }
+  
+  func deleteAll() {
+    worker.deleteAll(managedObjectType: Ticker.self)
+  }
 }

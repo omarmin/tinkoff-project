@@ -38,7 +38,6 @@
 		969DFBB4240ADBD40014F8DA /* schema.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 969DFBB2240ADBD40014F8DA /* schema.xcdatamodeld */; };
 		969DFBB8240ADCEE0014F8DA /* Ticker+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969DFBB7240ADCEE0014F8DA /* Ticker+CoreDataClass.swift */; };
 		969DFBBA240ADCFA0014F8DA /* Ticker+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969DFBB9240ADCFA0014F8DA /* Ticker+CoreDataProperties.swift */; };
-		969DFBBC240ADD610014F8DA /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969DFBBB240ADD610014F8DA /* DatabaseManager.swift */; };
 		969DFBBF240BCC7E0014F8DA /* TickerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969DFBBE240BCC7E0014F8DA /* TickerData.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,7 +77,6 @@
 		969DFBB3240ADBD40014F8DA /* schema.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = schema.xcdatamodel; sourceTree = "<group>"; };
 		969DFBB7240ADCEE0014F8DA /* Ticker+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ticker+CoreDataClass.swift"; sourceTree = "<group>"; };
 		969DFBB9240ADCFA0014F8DA /* Ticker+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ticker+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		969DFBBB240ADD610014F8DA /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		969DFBBE240BCC7E0014F8DA /* TickerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -279,7 +277,6 @@
 				969DFBB6240ADCCE0014F8DA /* CoreData Properties */,
 				969DFBB5240ADCBE0014F8DA /* CoredData Classes */,
 				969DFBB2240ADBD40014F8DA /* schema.xcdatamodeld */,
-				969DFBBB240ADD610014F8DA /* DatabaseManager.swift */,
 				82569685240ED015007780AE /* ManagedObjectConvertible.swift */,
 				82569687240ED05C007780AE /* ManagedObjectProtocol.swift */,
 				82569689240ED420007780AE /* CoreDataStack.swift */,
@@ -482,7 +479,6 @@
 				8256968A240ED420007780AE /* CoreDataStack.swift in Sources */,
 				430909482402C0A40030875D /* Constants.swift in Sources */,
 				969DFBB4240ADBD40014F8DA /* schema.xcdatamodeld in Sources */,
-				969DFBBC240ADD610014F8DA /* DatabaseManager.swift in Sources */,
 				43090922240290BA0030875D /* ModulesFactory.swift in Sources */,
 				4309093A240290BA0030875D /* BaseCoordinator.swift in Sources */,
 				82569686240ED015007780AE /* ManagedObjectConvertible.swift in Sources */,
