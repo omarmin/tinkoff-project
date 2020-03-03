@@ -1,16 +1,27 @@
 PODS:
-  - TinkoffTickets (0.1.0)
+  - R.swift (5.1.0):
+    - R.swift.Library (~> 5.1.0)
+  - R.swift.Library (5.1.0)
+  - TinkoffTickets (0.1.0):
+    - R.swift (~> 5.1.0)
 
 DEPENDENCIES:
   - TinkoffTickets (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - R.swift
+    - R.swift.Library
 
 EXTERNAL SOURCES:
   TinkoffTickets:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TinkoffTickets: aebd4a286295e1848938485ca635c470b867a02a
+  R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
+  R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
+  TinkoffTickets: dfddd00c469e8e21d076323f8c3589018f9322ab
 
-PODFILE CHECKSUM: a7eac335a0e05d93fb4974a2bd8b04e7fe40860e
+PODFILE CHECKSUM: 651f9c5450a47de8701cb9aeeb9e8fe263b45246
 
 COCOAPODS: 1.8.4
