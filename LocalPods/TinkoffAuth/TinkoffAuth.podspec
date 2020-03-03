@@ -27,12 +27,13 @@ TODO: Add long description of the pod here.
   s.author           = { 'Omar Minkailov' => 'omar.min@mail.ru' }
   s.source           = { :git => 'https://github.com/Omar Minkailov/TinkoffAuth.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '10.0'
+  s.swift_version = '5.0'
+  s.ios.deployment_target = '13.0'
   
   s.source_files = 'TinkoffAuth/Sources/**/*'
   s.resources = 'TinkoffAuth/Assets/**/*'
 
-  s.dependency 'R.swift'
+  s.dependency 'R.swift', '~> 5.1.0'
 
   r_swift_script = '"$PODS_ROOT/R.swift/rswift" generate --accessLevel public "$PODS_TARGET_SRCROOT/TinkoffAuth/Sources/R.generated.swift"'
   s.script_phases = [{
