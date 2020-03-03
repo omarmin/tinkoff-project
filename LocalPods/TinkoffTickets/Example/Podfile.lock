@@ -1,0 +1,16 @@
+PODS:
+  - TinkoffTickets (0.1.0)
+
+DEPENDENCIES:
+  - TinkoffTickets (from `../`)
+
+EXTERNAL SOURCES:
+  TinkoffTickets:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TinkoffTickets: aebd4a286295e1848938485ca635c470b867a02a
+
+PODFILE CHECKSUM: a7eac335a0e05d93fb4974a2bd8b04e7fe40860e
+
+COCOAPODS: 1.8.4
