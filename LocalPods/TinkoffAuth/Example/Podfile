@@ -5,12 +5,7 @@ target 'TinkoffAuth_Example' do
 
   pod 'R.swift', '~> 5.0.0'
   pod 'TinkoffAuth', :path => '../'
-
-  target 'TinkoffAuth_Tests' do
-    inherit! :search_paths
-
     
-  end
 end
 
 pre_install do |installer|
