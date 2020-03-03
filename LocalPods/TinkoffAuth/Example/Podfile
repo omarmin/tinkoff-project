@@ -3,7 +3,6 @@ use_frameworks!
 
 target 'TinkoffAuth_Example' do
 
-  pod 'R.swift', '~> 5.0.0'
   pod 'TinkoffAuth', :path => '../'
     
 end
