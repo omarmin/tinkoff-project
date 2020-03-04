@@ -253,6 +253,23 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		8256968F240F8CA7007780AE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				82569685240ED015007780AE /* ManagedObjectConvertible.swift */,
+				82569687240ED05C007780AE /* ManagedObjectProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		82569690240F8CDF007780AE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				969DFBBD240BCC6F0014F8DA /* Tickers */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		88E6FE45BB5E8D6E083D6F9F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,25 +282,23 @@
 		969DFBB0240ADBB30014F8DA /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				969DFBB1240ADBBC0014F8DA /* Database Manager */,
+				969DFBB1240ADBBC0014F8DA /* Core Data */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		969DFBB1240ADBBC0014F8DA /* Database Manager */ = {
+		969DFBB1240ADBBC0014F8DA /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				969DFBBD240BCC6F0014F8DA /* Tickers */,
+				82569690240F8CDF007780AE /* Entities */,
 				969DFBB6240ADCCE0014F8DA /* CoreData Properties */,
 				969DFBB5240ADCBE0014F8DA /* CoredData Classes */,
+				8256968F240F8CA7007780AE /* Protocols */,
 				969DFBB2240ADBD40014F8DA /* schema.xcdatamodeld */,
-				82569685240ED015007780AE /* ManagedObjectConvertible.swift */,
-				82569687240ED05C007780AE /* ManagedObjectProtocol.swift */,
 				82569689240ED420007780AE /* CoreDataStack.swift */,
 				8256968B240ED476007780AE /* CoreDataWorker.swift */,
-				8256968D240ED504007780AE /* TickerDataController.swift */,
 			);
-			path = "Database Manager";
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 		969DFBB5240ADCBE0014F8DA /* CoredData Classes */ = {
@@ -306,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				969DFBBE240BCC7E0014F8DA /* TickerData.swift */,
+				8256968D240ED504007780AE /* TickerDataController.swift */,
 			);
 			path = Tickers;
 			sourceTree = "<group>";
