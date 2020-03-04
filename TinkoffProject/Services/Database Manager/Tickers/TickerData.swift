@@ -9,7 +9,7 @@
 import Foundation
 
 struct TickerData {
-  let description: String?
-  let symbol: String
-  let displaySymbol: String?
+    let description: String?
+    let symbol: String
+    let displaySymbol: String?
 }
