@@ -35,7 +35,7 @@ TODO: Add long description of the pod here.
   s.resources = 'TinkoffTickets/Resources/**/*'
 
   s.dependency 'R.swift', '~> 5.1.0'
-  s.dependency 'TinkoffNetwork', '~> 5.1.0'
+  s.dependency 'TinkoffNetwork'
 
   r_swift_script = '"$PODS_ROOT/R.swift/rswift" generate --accessLevel public "$PODS_TARGET_SRCROOT/TinkoffTickets/Classes/R.generated.swift"'
   s.script_phases = [{

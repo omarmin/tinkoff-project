@@ -215,11 +215,13 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TinkoffTickets_Example/Pods-TinkoffTickets_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/TinkoffNetwork/TinkoffNetwork.framework",
 				"${BUILT_PRODUCTS_DIR}/TinkoffTickets/TinkoffTickets.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TinkoffNetwork.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TinkoffTickets.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

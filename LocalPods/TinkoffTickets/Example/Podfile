@@ -4,6 +4,7 @@ use_frameworks!
 target 'TinkoffTickets_Example' do
   
   pod 'TinkoffTickets', :path => '../'
+  pod 'TinkoffNetwork', :path => '../../TinkoffNetwork'
   
 end
 

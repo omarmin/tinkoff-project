@@ -3,7 +3,12 @@ warning_threshold: 15
 excluded:
 - Pods
 - R.generated.swift
-- LocalPods
+- LocalPods/TinkoffAuth/TinkoffAuth/Classes/R.generated.swift
+- LocalPods/TinkoffNetwork/TinkoffNetwork/Classes/R.generated.swift
+- LocalPods/TinkoffTickets/TinkoffTickets/Classes/R.generated.swift
+- LocalPods/TinkoffAuth/Example
+- LocalPods/TinkoffNetwork/Example
+- LocalPods/TinkoffTickets/Example
 
 disabled_rules:
 - trailing_whitespace

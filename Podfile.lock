@@ -9,6 +9,7 @@ PODS:
     - R.swift (~> 5.1.0)
   - TinkoffTickets (0.1.0):
     - R.swift (~> 5.1.0)
+    - TinkoffNetwork
 
 DEPENDENCIES:
   - R.swift
@@ -37,7 +38,7 @@ SPEC CHECKSUMS:
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
   TinkoffAuth: aa3141a66edf0263350680c5083789e2152c5b2f
   TinkoffNetwork: 7f167d111c347995195a15678783743b543c1fc0
-  TinkoffTickets: dfddd00c469e8e21d076323f8c3589018f9322ab
+  TinkoffTickets: 72c315bd85538c9a1cfd711f1703c656d91b4b8e
 
 PODFILE CHECKSUM: feac0ade5f0aa39cf997490100afb1fd80a3afb6
 

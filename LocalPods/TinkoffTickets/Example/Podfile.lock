@@ -2,10 +2,14 @@ PODS:
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
+  - TinkoffNetwork (0.1.0):
+    - R.swift (~> 5.1.0)
   - TinkoffTickets (0.1.0):
     - R.swift (~> 5.1.0)
+    - TinkoffNetwork
 
 DEPENDENCIES:
+  - TinkoffNetwork (from `../../TinkoffNetwork`)
   - TinkoffTickets (from `../`)
 
 SPEC REPOS:
@@ -14,14 +18,17 @@ SPEC REPOS:
     - R.swift.Library
 
 EXTERNAL SOURCES:
+  TinkoffNetwork:
+    :path: "../../TinkoffNetwork"
   TinkoffTickets:
     :path: "../"
 
 SPEC CHECKSUMS:
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
-  TinkoffTickets: dfddd00c469e8e21d076323f8c3589018f9322ab
+  TinkoffNetwork: 7f167d111c347995195a15678783743b543c1fc0
+  TinkoffTickets: 72c315bd85538c9a1cfd711f1703c656d91b4b8e
 
-PODFILE CHECKSUM: 651f9c5450a47de8701cb9aeeb9e8fe263b45246
+PODFILE CHECKSUM: 6f0b9dbda85379857ae0a1f1f9a5b9175ae2fa47
 
 COCOAPODS: 1.8.4
