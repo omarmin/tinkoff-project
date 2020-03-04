@@ -1,25 +1,25 @@
 import Foundation
 
-typealias Parameters = [String: String]
+public typealias Parameters = [String: String]
 
-protocol IRequest {
+public protocol IRequest {
     var urlRequest: URLRequest? { get }
 }
 
-struct Request {
+public struct Request: IRequest {
     var endpoint: Endpoint
     var method: HTTPMethod
     var parameters: Parameters?
     var body: Encodable?
 
-    init(_ endpoint: Endpoint, method: HTTPMethod = .get, parameters: Parameters? = nil, body: Encodable? = nil) {
+    public init(_ endpoint: Endpoint, method: HTTPMethod = .get, parameters: Parameters? = nil, body: Encodable? = nil) {
         self.endpoint = endpoint
         self.method = method
         self.parameters = parameters
         self.body = body
     }
 
-    var urlRequest: URLRequest? {
+    public var urlRequest: URLRequest? {
         var urlComponents = URLComponents(url: endpoint.fullUrl, resolvingAgainstBaseURL: false)
         
         if let parameters = parameters {

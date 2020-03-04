@@ -1,6 +1,6 @@
 import Foundation
 
-enum Error: Swift.Error {
+public enum TinkoffError: Error {
     case unknown
     case noData
 }

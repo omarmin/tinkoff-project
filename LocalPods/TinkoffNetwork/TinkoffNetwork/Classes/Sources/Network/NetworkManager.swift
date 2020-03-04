@@ -1,16 +1,18 @@
 import Foundation
 
-protocol INetworkManager {
-    func perform<T>(request: IRequest, completion: @escaping (Result<T, Swift.Error>) -> Void) where T: Decodable
+public protocol INetworkManager {
+    func perform<T>(request: IRequest, completion: @escaping (Result<T, Error>) -> Void) where T: Decodable
 }
 
-class NetworkManager: INetworkManager {
+public class NetworkManager: INetworkManager {
     let session = URLSession(configuration: .default)
+    
+    public init() { }
 
-    func perform<T>(request: IRequest, completion: @escaping (Result<T, Swift.Error>) -> ()) where T: Decodable {
+    public func perform<T>(request: IRequest, completion: @escaping (Result<T, Error>) -> Void) where T: Decodable {
         guard let urlRequest = request.urlRequest else { return }
         
-        let onMainCompletion = { (result: Result<T, Swift.Error>) in
+        let onMainCompletion = { (result: Result<T, Error>) in
             DispatchQueue.main.async {
                 completion(result)
             }
@@ -25,7 +27,7 @@ class NetworkManager: INetworkManager {
             }
 
             guard let data = data else {
-                onMainCompletion(Result.failure(Error.noData))
+                onMainCompletion(Result.failure(TinkoffError.noData))
                 return
             }
             
@@ -38,19 +40,21 @@ class NetworkManager: INetworkManager {
             #endif
 
             if httpResponse?.statusCode != 200 {
-                onMainCompletion(Result.failure(Error.unknown))
+                onMainCompletion(Result.failure(TinkoffError.unknown))
                 return
             }
             
             do {
                 #if DEBUG
+                // swiftlint:disable force_try
                 let model = try! JSONDecoder().decode(T.self, from: data)
+                // swiftlint:enable force_try
                 #else
                 let model = try JSONDecoder().decode(T.self, from: data)
                 #endif
                 onMainCompletion(Result.success(model))
             } catch {
-                onMainCompletion(Result.failure(Error.unknown))
+                onMainCompletion(Result.failure(TinkoffError.unknown))
             }
         }
 
