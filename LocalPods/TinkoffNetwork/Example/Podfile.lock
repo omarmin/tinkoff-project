@@ -1,0 +1,27 @@
+PODS:
+  - R.swift (5.1.0):
+    - R.swift.Library (~> 5.1.0)
+  - R.swift.Library (5.1.0)
+  - TinkoffNetwork (0.1.0):
+    - R.swift (~> 5.1.0)
+
+DEPENDENCIES:
+  - TinkoffNetwork (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - R.swift
+    - R.swift.Library
+
+EXTERNAL SOURCES:
+  TinkoffNetwork:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
+  R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
+  TinkoffNetwork: 7f167d111c347995195a15678783743b543c1fc0
+
+PODFILE CHECKSUM: 0b6649044259b5c9f5578a6684ada4babd0c5483
+
+COCOAPODS: 1.8.4

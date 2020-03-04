@@ -1,10 +1,10 @@
 platform :ios, '13.0'
 use_frameworks!
 
-target 'TinkoffTickets_Example' do
+target 'TinkoffNetwork_Example' do
   
-  pod 'TinkoffTickets', :path => '../'
-  
+  pod 'TinkoffNetwork', :path => '../'
+    
 end
 
 pre_install do |installer|
