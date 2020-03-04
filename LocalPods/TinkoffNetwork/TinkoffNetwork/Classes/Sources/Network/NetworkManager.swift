@@ -1,7 +1,7 @@
 import Foundation
 
 public protocol INetworkManager {
-    func perform<T>(request: IRequest, completion: @escaping (Result<T, Error>) -> Void) where T: Decodable
+    func perform<T>(_ request: IRequest, completion: @escaping (Result<T, Error>) -> Void) where T: Decodable
 }
 
 public class NetworkManager: INetworkManager {
@@ -9,7 +9,7 @@ public class NetworkManager: INetworkManager {
     
     public init() { }
 
-    public func perform<T>(request: IRequest, completion: @escaping (Result<T, Error>) -> Void) where T: Decodable {
+    public func perform<T>(_ request: IRequest, completion: @escaping (Result<T, Error>) -> Void) where T: Decodable {
         guard let urlRequest = request.urlRequest else { return }
         
         let onMainCompletion = { (result: Result<T, Error>) in

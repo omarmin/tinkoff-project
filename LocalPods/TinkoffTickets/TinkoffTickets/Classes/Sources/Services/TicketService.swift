@@ -23,7 +23,7 @@ class TicketService: ITicketService {
         
         let request = Request(TicketEndpoint.tickets, parameters: parameters)
         
-        networkManager.perform(request: request) { (result: Result<[Ticket], Error>) in
+        networkManager.perform(request) { (result: Result<[Ticket], Error>) in
             completion(result)
         }
     }
