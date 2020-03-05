@@ -43,7 +43,6 @@ extension TicketsScreenViewController: UITableViewDataSource {
         let ticket = tickets[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "TicketCell", for: indexPath) as? TicketCell
         cell?.setup(with: ticket)
-        // TODO: ("temp")
         return cell ?? UITableViewCell()
     }
 }

@@ -88,7 +88,11 @@ class CoreDataWorker: CoreDataWorkerProtocol {
         }
     }
     
-    func delete<Entity>(type: Entity.Type, with predicate: NSPredicate?, completion: @escaping (Result<NSPersistentStoreResult, Error>) -> Void) where Entity: ManagedObjectConvertible {
+    func delete<Entity>(
+        type: Entity.Type,
+        with predicate: NSPredicate?,
+        completion: @escaping (Result<NSPersistentStoreResult, Error>) -> Void
+    ) where Entity: ManagedObjectConvertible {
         coreData.performForegroundTask { context in
             do {
                 let fetchRequest = Entity.ManagedObject.fetchRequest()
