@@ -30,6 +30,15 @@
 		824C766A24044C2C0013754A /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824C766924044C2C0013754A /* AuthCoordinator.swift */; };
 		824C766C24044CA20013754A /* AuthFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824C766B24044CA20013754A /* AuthFactory.swift */; };
 		824C766E24044E350013754A /* AuthCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824C766D24044E350013754A /* AuthCoordinatorOutput.swift */; };
+		82569686240ED015007780AE /* ManagedObjectConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82569685240ED015007780AE /* ManagedObjectConvertible.swift */; };
+		82569688240ED05C007780AE /* ManagedObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82569687240ED05C007780AE /* ManagedObjectProtocol.swift */; };
+		8256968A240ED420007780AE /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82569689240ED420007780AE /* CoreDataStack.swift */; };
+		8256968C240ED476007780AE /* CoreDataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8256968B240ED476007780AE /* CoreDataWorker.swift */; };
+		8256968E240ED504007780AE /* TickerDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8256968D240ED504007780AE /* TickerDataController.swift */; };
+		969DFBB4240ADBD40014F8DA /* schema.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 969DFBB2240ADBD40014F8DA /* schema.xcdatamodeld */; };
+		969DFBB8240ADCEE0014F8DA /* Ticker+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969DFBB7240ADCEE0014F8DA /* Ticker+CoreDataClass.swift */; };
+		969DFBBA240ADCFA0014F8DA /* Ticker+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969DFBB9240ADCFA0014F8DA /* Ticker+CoreDataProperties.swift */; };
+		969DFBBF240BCC7E0014F8DA /* TickerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969DFBBE240BCC7E0014F8DA /* TickerData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +69,15 @@
 		824C766924044C2C0013754A /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		824C766B24044CA20013754A /* AuthFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFactory.swift; sourceTree = "<group>"; };
 		824C766D24044E350013754A /* AuthCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinatorOutput.swift; sourceTree = "<group>"; };
+		82569685240ED015007780AE /* ManagedObjectConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectConvertible.swift; sourceTree = "<group>"; };
+		82569687240ED05C007780AE /* ManagedObjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectProtocol.swift; sourceTree = "<group>"; };
+		82569689240ED420007780AE /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		8256968B240ED476007780AE /* CoreDataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataWorker.swift; sourceTree = "<group>"; };
+		8256968D240ED504007780AE /* TickerDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDataController.swift; sourceTree = "<group>"; };
+		969DFBB3240ADBD40014F8DA /* schema.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = schema.xcdatamodel; sourceTree = "<group>"; };
+		969DFBB7240ADCEE0014F8DA /* Ticker+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ticker+CoreDataClass.swift"; sourceTree = "<group>"; };
+		969DFBB9240ADCFA0014F8DA /* Ticker+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ticker+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		969DFBBE240BCC7E0014F8DA /* TickerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +113,7 @@
 		07753ABF240026EE00A513FA /* TinkoffProject */ = {
 			isa = PBXGroup;
 			children = (
+				969DFBB0240ADBB30014F8DA /* Services */,
 				430908C9240290BA0030875D /* Common */,
 				4309080724028D1F0030875D /* AppDelegate */,
 				824FD6412401C3AC001BDCD8 /* Modules */,
@@ -234,6 +253,23 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		8256968F240F8CA7007780AE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				82569685240ED015007780AE /* ManagedObjectConvertible.swift */,
+				82569687240ED05C007780AE /* ManagedObjectProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		82569690240F8CDF007780AE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				969DFBBD240BCC6F0014F8DA /* Tickers */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		88E6FE45BB5E8D6E083D6F9F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +277,53 @@
 				5134517CCD3B494870E96E24 /* Pods-TinkoffProject.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		969DFBB0240ADBB30014F8DA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				969DFBB1240ADBBC0014F8DA /* Core Data */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		969DFBB1240ADBBC0014F8DA /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				82569690240F8CDF007780AE /* Entities */,
+				969DFBB6240ADCCE0014F8DA /* CoreData Properties */,
+				969DFBB5240ADCBE0014F8DA /* CoredData Classes */,
+				8256968F240F8CA7007780AE /* Protocols */,
+				969DFBB2240ADBD40014F8DA /* schema.xcdatamodeld */,
+				82569689240ED420007780AE /* CoreDataStack.swift */,
+				8256968B240ED476007780AE /* CoreDataWorker.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		969DFBB5240ADCBE0014F8DA /* CoredData Classes */ = {
+			isa = PBXGroup;
+			children = (
+				969DFBB7240ADCEE0014F8DA /* Ticker+CoreDataClass.swift */,
+			);
+			path = "CoredData Classes";
+			sourceTree = "<group>";
+		};
+		969DFBB6240ADCCE0014F8DA /* CoreData Properties */ = {
+			isa = PBXGroup;
+			children = (
+				969DFBB9240ADCFA0014F8DA /* Ticker+CoreDataProperties.swift */,
+			);
+			path = "CoreData Properties";
+			sourceTree = "<group>";
+		};
+		969DFBBD240BCC6F0014F8DA /* Tickers */ = {
+			isa = PBXGroup;
+			children = (
+				969DFBBE240BCC7E0014F8DA /* TickerData.swift */,
+				8256968D240ED504007780AE /* TickerDataController.swift */,
+			);
+			path = Tickers;
 			sourceTree = "<group>";
 		};
 		EB238211E9D187286B292285 /* Frameworks */ = {
@@ -409,22 +492,31 @@
 				079773D9240683F3004616C1 /* CoordinatorFactoryProtocol.swift in Sources */,
 				079773D8240683EF004616C1 /* R.generated.swift in Sources */,
 				43090933240290BA0030875D /* Coordinatable.swift in Sources */,
+				8256968A240ED420007780AE /* CoreDataStack.swift in Sources */,
 				430909482402C0A40030875D /* Constants.swift in Sources */,
+				969DFBB4240ADBD40014F8DA /* schema.xcdatamodeld in Sources */,
 				43090922240290BA0030875D /* ModulesFactory.swift in Sources */,
 				4309093A240290BA0030875D /* BaseCoordinator.swift in Sources */,
+				82569686240ED015007780AE /* ManagedObjectConvertible.swift in Sources */,
+				969DFBBA240ADCFA0014F8DA /* Ticker+CoreDataProperties.swift in Sources */,
 				43090939240290BA0030875D /* Router.swift in Sources */,
 				430909422402A0940030875D /* MainCoordinatorOutput.swift in Sources */,
 				4391AC6824043EBD0093A6B6 /* AppDelegate.swift in Sources */,
 				430909402402A06B0030875D /* MainCoordinator.swift in Sources */,
+				82569688240ED05C007780AE /* ManagedObjectProtocol.swift in Sources */,
 				4391AC6A24043EE00093A6B6 /* ViewController.swift in Sources */,
 				4309080624028BBA0030875D /* AppCoordinator.swift in Sources */,
 				43090921240290BA0030875D /* CoordinatorFactory.swift in Sources */,
+				969DFBB8240ADCEE0014F8DA /* Ticker+CoreDataClass.swift in Sources */,
 				43090924240290BA0030875D /* MainFactoryProtocol.swift in Sources */,
 				43090932240290BA0030875D /* Presentable.swift in Sources */,
 				824C766A24044C2C0013754A /* AuthCoordinator.swift in Sources */,
+				8256968E240ED504007780AE /* TickerDataController.swift in Sources */,
 				824C766E24044E350013754A /* AuthCoordinatorOutput.swift in Sources */,
+				8256968C240ED476007780AE /* CoreDataWorker.swift in Sources */,
 				824C766C24044CA20013754A /* AuthFactory.swift in Sources */,
 				43090931240290BA0030875D /* Routable.swift in Sources */,
+				969DFBBF240BCC7E0014F8DA /* TickerData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +716,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		969DFBB2240ADBD40014F8DA /* schema.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				969DFBB3240ADBD40014F8DA /* schema.xcdatamodel */,
+			);
+			currentVersion = 969DFBB3240ADBD40014F8DA /* schema.xcdatamodel */;
+			path = schema.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 07753AB5240026EE00A513FA /* Project object */;
 }
