@@ -30,16 +30,16 @@ TODO: Add long description of the pod here.
   s.swift_version = '5.0'
   s.ios.deployment_target = '13.0'
   
-  s.source_files = 'TinkoffAuth/Sources/**/*'
-  s.resources = 'TinkoffAuth/Assets/**/*'
+  s.source_files = 'TinkoffAuth/Classes/**/*'
+  s.resources = 'TinkoffAuth/Resources/**/*'
 
   s.dependency 'R.swift', '~> 5.1.0'
 
-  r_swift_script = '"$PODS_ROOT/R.swift/rswift" generate --accessLevel public "$PODS_TARGET_SRCROOT/TinkoffAuth/Sources/R.generated.swift"'
+  r_swift_script = '"$PODS_ROOT/R.swift/rswift" generate --accessLevel public "$PODS_TARGET_SRCROOT/TinkoffAuth/Classes/R.generated.swift"'
   s.script_phases = [{
       :name => 'R.swift',
       :input_files => ['$TEMP_DIR/rswift-lastrun'],
-      :output_files => ['$PODS_TARGET_SRCROOT/TinkoffAuth/Sources/R.generated.swift'],
+      :output_files => ['$PODS_TARGET_SRCROOT/TinkoffAuth/Classes/R.generated.swift'],
       :script => r_swift_script,
       :execution_position => :before_compile
   }]

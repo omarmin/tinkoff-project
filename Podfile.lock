@@ -1,18 +1,28 @@
 PODS:
+  - MBProgressHUD (1.2.0)
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
   - SwiftLint (0.39.1)
   - TinkoffAuth (0.1.0):
-    - R.swift
+    - R.swift (~> 5.1.0)
+  - TinkoffNetwork (0.1.0):
+    - R.swift (~> 5.1.0)
+  - TinkoffTickets (0.1.0):
+    - MBProgressHUD
+    - R.swift (~> 5.1.0)
+    - TinkoffNetwork
 
 DEPENDENCIES:
   - R.swift
   - SwiftLint
   - TinkoffAuth (from `LocalPods/TinkoffAuth`)
+  - TinkoffNetwork (from `LocalPods/TinkoffNetwork`)
+  - TinkoffTickets (from `LocalPods/TinkoffTickets`)
 
 SPEC REPOS:
   trunk:
+    - MBProgressHUD
     - R.swift
     - R.swift.Library
     - SwiftLint
@@ -20,13 +30,20 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   TinkoffAuth:
     :path: LocalPods/TinkoffAuth
+  TinkoffNetwork:
+    :path: LocalPods/TinkoffNetwork
+  TinkoffTickets:
+    :path: LocalPods/TinkoffTickets
 
 SPEC CHECKSUMS:
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
-  TinkoffAuth: 091e14a5efd700272645ae23aec6d1de664e0f5d
+  TinkoffAuth: aa3141a66edf0263350680c5083789e2152c5b2f
+  TinkoffNetwork: 7f167d111c347995195a15678783743b543c1fc0
+  TinkoffTickets: e16672e6ded9740fe8cf547f4b3722c991e85660
 
-PODFILE CHECKSUM: 40902077e366f219b11cffaf9c94235e1a71f45a
+PODFILE CHECKSUM: feac0ade5f0aa39cf997490100afb1fd80a3afb6
 
 COCOAPODS: 1.8.4
