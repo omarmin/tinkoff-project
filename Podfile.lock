@@ -1,4 +1,5 @@
 PODS:
+  - MBProgressHUD (1.2.0)
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
@@ -8,6 +9,7 @@ PODS:
   - TinkoffNetwork (0.1.0):
     - R.swift (~> 5.1.0)
   - TinkoffTickets (0.1.0):
+    - MBProgressHUD
     - R.swift (~> 5.1.0)
     - TinkoffNetwork
 
@@ -20,6 +22,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - MBProgressHUD
     - R.swift
     - R.swift.Library
     - SwiftLint
@@ -33,12 +36,13 @@ EXTERNAL SOURCES:
     :path: LocalPods/TinkoffTickets
 
 SPEC CHECKSUMS:
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
   TinkoffAuth: aa3141a66edf0263350680c5083789e2152c5b2f
   TinkoffNetwork: 7f167d111c347995195a15678783743b543c1fc0
-  TinkoffTickets: 72c315bd85538c9a1cfd711f1703c656d91b4b8e
+  TinkoffTickets: e16672e6ded9740fe8cf547f4b3722c991e85660
 
 PODFILE CHECKSUM: feac0ade5f0aa39cf997490100afb1fd80a3afb6
 

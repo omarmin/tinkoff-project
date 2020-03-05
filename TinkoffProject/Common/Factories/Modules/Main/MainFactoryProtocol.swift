@@ -6,8 +6,8 @@
 //  Copyright © 2020 tinkoff-group-5. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol MainFactoryProtocol {
-    func makeMainView() -> ViewController
+    func makeMainView() -> UIViewController
 }

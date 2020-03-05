@@ -7,14 +7,14 @@
 //
 
 import UIKit
+import TinkoffTickets
 
 final class ModulesFactory {}
 
 // MARK: - MainFactoryProtocol
 extension ModulesFactory: MainFactoryProtocol {
-    func makeMainView() -> ViewController {
-        let mainView: ViewController = ViewController()
-        mainView.view.backgroundColor = .red
-        return mainView
+    func makeMainView() -> UIViewController {
+        let view = TicketsScreenAssembly.assembly()
+        return view
     }
 }

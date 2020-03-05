@@ -36,8 +36,9 @@ TODO: Add long description of the pod here.
 
   s.dependency 'R.swift', '~> 5.1.0'
   s.dependency 'TinkoffNetwork'
+  s.dependency 'MBProgressHUD'
 
-  r_swift_script = '"$PODS_ROOT/R.swift/rswift" generate --accessLevel public "$PODS_TARGET_SRCROOT/TinkoffTickets/Classes/R.generated.swift"'
+  r_swift_script = '"$PODS_ROOT/R.swift/rswift" generate "$PODS_TARGET_SRCROOT/TinkoffTickets/Classes/R.generated.swift"'
   s.script_phases = [{
       :name => 'R.swift',
       :input_files => ['$TEMP_DIR/rswift-lastrun'],

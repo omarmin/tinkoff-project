@@ -8,7 +8,9 @@
 import Foundation
 
 struct Ticket {
-    
+    let symbol: String
+    let displaySymbol: String
+    let description: String
 }
 
 extension Ticket: Decodable {
